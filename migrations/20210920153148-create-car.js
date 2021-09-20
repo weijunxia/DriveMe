@@ -28,6 +28,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       car_pic: {
         type: Sequelize.STRING,
         allowNull: false
