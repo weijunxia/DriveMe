@@ -6,8 +6,8 @@ module.exports = {
       'bookings',
       [
         {
-          carId: 1,
-          userId: 1,
+          car_id: 1,
+          user_id: 1,
           date_from: '9/21/2021',
           date_to: '9/22/2021'
         }
