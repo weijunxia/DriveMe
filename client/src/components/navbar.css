@@ -1,0 +1,44 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+}
+
+.navBar_logo {
+  background-color: black;
+  object-fit: contain;
+  height: 100px;
+  margin-left: 20px;
+  border-radius: 100%;
+}
+
+.navBar_center {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: fit-content;
+  padding: 10px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border: 999px;
+}
+
+.navBar_center > input {
+  border: none;
+  width: 250px;
+  padding: 10px;
+  outline-width: 0px;
+}
+
+.navBar_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20vw;
+  margin-right: 80px;
+}

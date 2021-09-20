@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  width: 20vw;
+  margin-left: 50px;
+}
+.footer_left > p {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.footer_right > .socialImg {
+  margin-left: 15px;
+}
