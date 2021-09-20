@@ -13,7 +13,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Car.init(
     {
-      userId: DataTypes.INTEGER,
+      userId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
       make: DataTypes.STRING,
       model: DataTypes.STRING,
       year: DataTypes.INTEGER,
