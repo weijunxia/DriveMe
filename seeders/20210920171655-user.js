@@ -3,16 +3,16 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'teams',
+      'users',
       [
-        {},
         {
-          name: 'WIND',
-          territory: 'Land of Blue Skies'
-        },
-        {
-          name: 'WAVE',
-          territory: 'Sea Towns'
+          name: 'Brandon David',
+          email: 'jmall@mail.com',
+          passwordDigest: 'password123',
+          picture:
+            'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
+          isOwner: true,
+          isRenter: false
         }
       ],
       {}
@@ -20,6 +20,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('teams')
+    await queryInterface.bulkDelete('users')
   }
 }
