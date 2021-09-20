@@ -11,8 +11,8 @@ const GetAllUserProfiles = async (req, res) => {
 
 const GetUserProfile = async (req, res) => {
   try {
-    const userAndCars = await User.findById(req.params.id, {
-      include: [{ model: Car, as: 'cars' }]
+    const userAndCars = await User.findByPk(req.params.id, {
+      include: [{ model: Car }]
     })
     res.send(userAndCars)
   } catch (error) {
