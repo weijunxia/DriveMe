@@ -31,8 +31,8 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       },
-      date_from: DataTypes.DATE,
-      date_to: DataTypes.DATE
+      date_from: DataTypes.DATEONLY,
+      date_to: DataTypes.DATEONLY
     },
     {
       sequelize,
