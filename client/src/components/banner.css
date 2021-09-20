@@ -1,0 +1,44 @@
+.banner {
+  height: 50vh;
+  position: relative;
+  background: url('../images/porsche911.jpeg');
+}
+
+.bannerInfo {
+  background-color: black;
+  color: white;
+  padding: 25vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  width: 300vw;
+}
+
+.bannerInfo > button {
+  background-color: #b39f19;
+  color: white;
+  text-transform: inherit;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.bannerInfo > h5 {
+  margin-top: 10px;
+}
+
+.bannerInfo > button:hover {
+  background-color: white;
+  color: #b39f19;
+}
+
+.bannerSearch {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchButton {
+  background-color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  color: #b39f19;
+}
