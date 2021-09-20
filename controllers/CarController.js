@@ -32,7 +32,7 @@ const UpdateCar = async (req, res) => {
 
 const DeleteCar = async (req, res) => {
   try {
-    await Post.destroy({ where: { id: req.params.post_id } })
+    await Post.destroy({ where: { id: req.params.car_id } })
     res.send({ msg: 'Car Deleted', payload: req.params.car_id, status: 'Ok' })
   } catch (error) {
     throw error
