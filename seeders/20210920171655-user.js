@@ -8,11 +8,11 @@ module.exports = {
         {
           name: 'Brandon David',
           email: 'jmall@mail.com',
-          passwordDigest: 'password123',
+          password_digest: 'password123',
           picture:
             'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
-          isOwner: true,
-          isRenter: false
+          is_owner: true,
+          is_renter: false
         }
       ],
       {}

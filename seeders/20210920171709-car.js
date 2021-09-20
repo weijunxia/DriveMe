@@ -6,7 +6,7 @@ module.exports = {
       'cars',
       [
         {
-          userId: 1,
+          user_id: 1,
           make: 'Tesla',
           model: 'Model X',
           year: 2021,

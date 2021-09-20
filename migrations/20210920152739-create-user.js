@@ -20,7 +20,7 @@ module.exports = {
           isEmail: true
         }
       },
-      passwordDigest: {
+      password_digest: {
         type: Sequelize.STRING,
         allowNull: false
       },
@@ -28,11 +28,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      isOwner: {
+      is_owner: {
         type: Sequelize.BOOLEAN,
         allowNull: false
       },
-      isRenter: {
+      is_renter: {
         type: Sequelize.BOOLEAN,
         allowNull: false
       },

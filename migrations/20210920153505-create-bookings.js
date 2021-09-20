@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       carId: {
+        field: 'car_id',
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -17,6 +18,7 @@ module.exports = {
         }
       },
       userId: {
+        field: 'user_id',
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
