@@ -2,7 +2,7 @@ import Client from './api'
 
 export const GetCars = async () => {
   try {
-    const res = await Client.get('/cars')
+    const res = await Client.get('/api/cars')
     return res.data
   } catch (error) {
     throw error
