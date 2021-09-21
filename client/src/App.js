@@ -10,26 +10,7 @@ function App() {
       <header className="App-header">
         <Router>
           <NavBar />
-          <div className="test">
-            <Cards
-              car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-              make="Range Rover"
-              model="L405"
-              year="2021"
-            />
-            <Cards
-              car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-              make="Range Rover"
-              model="L405"
-              year="2021"
-            />
-            <Cards
-              car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-              make="Range Rover"
-              model="L405"
-              year="2021"
-            />
-          </div>
+
           <SearchResults
             car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
             make="Range Rover"
