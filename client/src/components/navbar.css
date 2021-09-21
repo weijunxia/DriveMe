@@ -12,7 +12,7 @@
 .navBar_logo {
   background-color: black;
   object-fit: contain;
-  height: 100px;
+  height: 50px;
   margin-left: 20px;
   border-radius: 100%;
 }
@@ -23,16 +23,16 @@
   align-items: center;
   max-width: fit-content;
   padding: 10px;
-  height: 30px;
+  height: 21px;
   border: 1px solid lightgray;
-  border: 999px;
+  border-radius: 999px;
 }
 
 .navBar_center > input {
   border: none;
   width: 250px;
   padding: 10px;
-  outline-width: 0px;
+  outline-width: 0;
 }
 
 .navBar_right {
@@ -40,5 +40,5 @@
   align-items: center;
   justify-content: space-between;
   width: 20vw;
-  margin-right: 80px;
+  margin-right: 20px;
 }
