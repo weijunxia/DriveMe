@@ -2,7 +2,6 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Cards from '../components/Cards'
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@material-ui/core'
 import './home.css'
 
 function Home() {
