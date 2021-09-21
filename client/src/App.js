@@ -1,7 +1,6 @@
 import './App.css'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
-
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import SearchResults from './components/SearchResults'
 import Home from './pages/Home'
@@ -34,7 +33,6 @@ function App() {
             price="$150/night"
             total="$357 total"
           />
-
 
           <Switch></Switch>
           <Footer />
