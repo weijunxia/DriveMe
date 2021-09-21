@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
+import Cards from './components/Cards'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import SearchResults from './components/SearchResults'
 import Cards from './components/Cards'
@@ -10,6 +11,9 @@ function App() {
       <header className="App-header">
         <Router>
           <NavBar />
+
+          <Cards />
+
           <div className="test">
             <Cards
               car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
@@ -50,6 +54,7 @@ function App() {
             price="$150/night"
             total="$357 total"
           />
+
           <Switch></Switch>
           <Footer />
         </Router>
