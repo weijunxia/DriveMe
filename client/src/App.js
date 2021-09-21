@@ -12,6 +12,7 @@ function App() {
         <Router>
           <NavBar />
 
+
           <Cards />
 
           <div className="test">
@@ -34,6 +35,7 @@ function App() {
               year="2021"
             />
           </div>
+
           <SearchResults
             car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
             make="Range Rover"
