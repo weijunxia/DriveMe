@@ -30,6 +30,7 @@ const Login = async (req, res) => {
 const Register = async (req, res) => {
   try {
     const { email, password, name, is_renter, is_owner, picture } = req.body
+    console.log(password)
     let password_digest = await middleware.hashPassword(password)
     const user = await User.create({
       email,
@@ -48,16 +49,16 @@ const Register = async (req, res) => {
 const UpdatePassword = async (req, res) => {
   try {
     const { oldPassword, newPassword } = req.body
-    const user = await User.findByPk(req.params.user_id)
+    const user = await User.findByPk(req.params.id)
     if (
       user &&
       (await middleware.comparePassword(
-        user.datavalues.passwordDigest,
+        user.datavalues.password_digest,
         oldPassword
       ))
     ) {
       let passwordDigest = await middleware.hashPassword(newPassword)
-      await user.update({ passwordDigest })
+      await user.update({ password_digest })
       return res.send({ status: 'Ok', payload: user })
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
