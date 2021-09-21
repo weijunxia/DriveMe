@@ -1,7 +1,8 @@
 .banner {
   height: 75vh;
   position: relative;
-  background: url('../images/porsche911.jpeg');
+  background: url('../images/porsche911.jpeg') no-repeat;
+  background-size: cover;
 }
 
 .bannerInfo {
