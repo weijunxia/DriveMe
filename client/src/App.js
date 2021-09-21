@@ -12,28 +12,9 @@ function App() {
         <Router>
           <NavBar />
           <Home />
-          <SearchResults
-            car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-            make="Range Rover"
-            model="L405"
-            year="2021"
-            description="This great car ..."
-            star={4.55}
-            price="$150/night"
-            total="$357 total"
-          />
-          <SearchResults
-            car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-            make="Range Rover"
-            model="L405"
-            year="2021"
-            description="This great car ..."
-            star={4.55}
-            price="$150/night"
-            total="$357 total"
-          />
-
-          <Switch></Switch>
+          <Switch>
+            <Route to="/search" component={SearchResults} />
+          </Switch>
           <Footer />
         </Router>
       </header>

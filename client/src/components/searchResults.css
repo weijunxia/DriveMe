@@ -1,52 +1,57 @@
-.searchResults {
-display:flex;
-position:relative;
-margin:15px;
-padding:15px;
-border-bottom:1px solid lightgray;
-cursor:pointer;
-
+.search_result_cars {
+  display: flex;
+  position: relative;
+  margin: 15px;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
 }
 
-.searchResults > img {
-  width:200px;
-  height: 200px;
-  border-radius:5px;
+.search_result_cars > img {
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
-.searchResults_info {
-display:flex;
-flex-direction: column;
-justify-content: space-between;
-padding-left: 10px;
+.search_result_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
-.searchResults_topInfo{
-  width:50vw;
-  padding:5px;
+.search_result_top_info {
+  width: 50vw;
+  padding: 5px;
 }
-.searchResults_topInfo >p{
-  color:gray;
-  margin-top:10px;
+.search_result_top_info > p {
+  color: gray;
+  margin-top: 10px;
 }
-.searchResults_heart {
-  position:absolute;
-}
-
-.searchResults_bottomInfo {
-display: flex;
-justify-content:space-between;
-}
-
-.searchResults_price {
+.search_result_heart {
   position: absolute;
-  right:15px;
-  bottom:15px;
 }
 
-.searchResults_stars{
-  color:#B39F19;
-  display:flex;
+.search_result_bottom_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_result_bottom_info > img {
+  width: 20vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.search_result_price {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.search_result_stars {
+  color: #b39f19;
+  display: flex;
   align-items: center;
 }
