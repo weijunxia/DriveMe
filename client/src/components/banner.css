@@ -1,5 +1,5 @@
 .banner {
-  height: 50vh;
+  height: 75vh;
   position: relative;
   background: url('../images/porsche911.jpeg');
 }
@@ -11,7 +11,7 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 40px;
-  width: 300vw;
+  width: 30vw;
 }
 
 .bannerInfo > button {
