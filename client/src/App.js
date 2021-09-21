@@ -11,9 +11,9 @@ function App() {
       <header className="App-header">
         <Router>
           <NavBar />
-          <Home />
           <Switch>
-            <Route to="/search" component={SearchResults} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/search" component={SearchResults} />
           </Switch>
           <Footer />
         </Router>
