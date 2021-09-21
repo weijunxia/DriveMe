@@ -10,14 +10,14 @@ function Home() {
       <Banner />
       <div className="homeSection">
         <Carousel>
-          {cars.map((car) => (
+          {/* {cars.map((car) => (
             <Cards
               car_pic={car.car_pic}
               make={car.make}
               model={car.model}
               year={car.year}
             />
-          ))}
+          ))} */}
         </Carousel>
       </div>
     </div>
