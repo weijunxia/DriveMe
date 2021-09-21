@@ -11,24 +11,14 @@ function Home() {
       <Banner />
       <div className="homeSection">
         <Carousel>
-          <Cards
-            car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-            make="Range Rover"
-            model="L405"
-            year="2021"
-          />
-          <Cards
-            car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-            make="Range Rover"
-            model="L405"
-            year="2021"
-          />
-          <Cards
-            car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
-            make="Range Rover"
-            model="L405"
-            year="2021"
-          />
+          {cars.map((car) => (
+            <Cards
+              car_pic={car.car_pic}
+              make={car.make}
+              model={car.model}
+              year={car.year}
+            />
+          ))}
         </Carousel>
       </div>
     </div>
