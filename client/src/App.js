@@ -1,18 +1,16 @@
 import './App.css'
+import React from 'react'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
-
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import SearchResults from './components/SearchResults'
 import Home from './pages/Home'
-
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Router>
           <NavBar />
-
           <Home />
           <SearchResults
             car_pic="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1_rangerover_tracking.jpg"
@@ -34,7 +32,6 @@ function App() {
             price="$150/night"
             total="$357 total"
           />
-
 
           <Switch></Switch>
           <Footer />
