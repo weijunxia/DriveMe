@@ -1,5 +1,5 @@
 import React from 'react'
-import './SearchResult.css'
+import './searchResults.css'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import StarIcon from '@material-ui/icons/Star'
 function SearchResults({
@@ -20,8 +20,7 @@ function SearchResults({
         <div className="searchResults_topInfo">
           <h3>{make}</h3>
           <h3>{model}</h3>
-          <p>{year}</p>
-          <p>______</p>
+          <h3>{year}</h3>
           <p>{description}</p>
         </div>
         <div className="searchResults_bottomInfo">
