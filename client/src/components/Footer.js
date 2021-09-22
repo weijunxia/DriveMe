@@ -13,13 +13,13 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer_left">
-        <Link to="/about">
+        <Link to="/about" style={{ textDecoration: 'none' }}>
           <p className="footerP">About Us</p>
         </Link>
-        <Link to="/learn">
+        <Link to="/learn" style={{ textDecoration: 'none' }}>
           <p className="footerP">Learn More</p>
         </Link>
-        <Link to="/learn">
+        <Link to="/privacy" style={{ textDecoration: 'none' }}>
           <p className="footerP">Privacy</p>
         </Link>
       </div>
