@@ -15,7 +15,7 @@ export default function SignIn(props) {
     setFormValues({ email: '', password: '' })
     props.setUser(payload)
     props.toggleAuthenticated(true)
-    props.history.push('/')
+    props.history.push('/home')
   }
 
   return (

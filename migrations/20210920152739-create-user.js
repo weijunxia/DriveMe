@@ -26,7 +26,7 @@ module.exports = {
       },
       picture: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       is_owner: {
         type: Sequelize.BOOLEAN,
