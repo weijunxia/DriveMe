@@ -31,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       },
+      name: DataTypes.STRING,
       rating: DataTypes.STRING,
       comment: DataTypes.STRING
     },
