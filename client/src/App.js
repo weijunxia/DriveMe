@@ -45,7 +45,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/search" component={SearchResults} />
             <Route
-              path="/login"
+              exact
+              path="/api/auth/login"
               component={(props) => (
                 <SignIn
                   {...props}
@@ -54,7 +55,7 @@ function App() {
                 />
               )}
             />
-            <Route path="/register" component={Register} />
+            <Route exact path="/api/auth/register" component={Register} />
             {user && authenticated && (
               <ProtectedRoute
                 authenticated={authenticated}
