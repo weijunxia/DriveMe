@@ -7,7 +7,8 @@ const iState = {
   name: '',
   email: '',
   password: '',
-  confirmPassword: ''
+  confirmPassword: '',
+  is_owner: false
 }
 
 export default function Register(props) {
@@ -15,7 +16,8 @@ export default function Register(props) {
     name: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    is_owner: false
   })
 
   const handleChange = (e) => {
@@ -27,10 +29,11 @@ export default function Register(props) {
     await RegisterUser({
       name: formValues.name,
       email: formValues.email,
-      password: formValues.password
+      password: formValues.password,
+      is_owner: formValues.is_owner
     })
     setFormValues(iState)
-    props.history.push('/api/auth/login')
+    props.history.push('/login')
   }
 
   return (
@@ -83,7 +86,7 @@ export default function Register(props) {
               Do you own a car and want to rent said your car and make passive
               income? Check this box to get started today!
             </p>
-            <Checkbox />
+            <Checkbox value={!formValues.is_owner} />
           </div>
         </div>
         <button

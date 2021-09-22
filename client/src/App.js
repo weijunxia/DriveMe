@@ -17,7 +17,9 @@ import { BASE_URL } from './services/api'
 import { GetCars, PostNewCar } from './services/CarServices'
 
 function App(props) {
-  const [authenticated, toggleAuthenticated] = useState(false)
+  const [authenticated, toggleAuthenticated] = useState(
+    false || localStorage.getItem('authenticated')
+  )
   const [user, setUser] = useState(null)
   const [cars, setCars] = useState([])
 
@@ -33,6 +35,7 @@ function App(props) {
     setCars(...cars, res.data)
     // props.history.push('/post-car')
   }
+
   const handleLogOut = () => {
     setUser(null)
     toggleAuthenticated(false)

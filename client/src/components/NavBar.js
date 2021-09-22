@@ -27,8 +27,8 @@ function NavBar({ authenticated, user, handleLogOut }) {
       <NavLink to="/post-car">
         <button>Become A Host</button>
       </NavLink>
-      <NavLink to="/api/auth/register">Register</NavLink>
-      <NavLink to="/api/auth/login">Sign In</NavLink>
+      <NavLink to="/register">Register</NavLink>
+      <NavLink to="/login">Sign In</NavLink>
     </nav>
   )
   return (

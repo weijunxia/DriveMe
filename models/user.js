@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       picture: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       is_owner: {
         type: DataTypes.BOOLEAN,
