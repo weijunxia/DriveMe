@@ -10,14 +10,14 @@ function Home(props) {
       <Banner />
       <div className="homeSection">
         <Carousel>
-          {/* {props.cars.map((car) => (
+          {props.cars.map((car) => (
             <Cards
               car_pic={car.car_pic}
               make={car.make}
               model={car.model}
               year={car.year}
             />
-          ))} */}
+          ))}
         </Carousel>
       </div>
     </div>

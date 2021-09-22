@@ -20,7 +20,7 @@ function Footer() {
           <p className="footerP">Learn More</p>
         </Link>
         <Link to="/learn">
-          <p className="footerP">Learn More</p>
+          <p className="footerP">Privacy</p>
         </Link>
       </div>
       <div className="footer_right">
