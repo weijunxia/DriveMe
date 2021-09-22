@@ -2,8 +2,7 @@ import { Checkbox } from '@material-ui/core'
 import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import MaterialUIForm from 'react-material-ui-form'
-import './signin.css'
-
+import './register-signin.css'
 const iState = {
   name: '',
   email: '',
@@ -31,7 +30,7 @@ export default function Register(props) {
       password: formValues.password
     })
     setFormValues(iState)
-    props.history.push('/login')
+    props.history.push('/api/auth/login')
   }
 
   return (
@@ -79,7 +78,7 @@ export default function Register(props) {
             value={formValues.confirmPassword}
             required
           />
-          <div className="checkbox">
+          <div className="check box">
             <p>
               Do you own a car and want to rent said your car and make passive
               income? Check this box to get started today!

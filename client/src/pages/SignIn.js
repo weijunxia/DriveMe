@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SignInUser } from '../services/Auth'
-import './signin.css'
+import './register-signin.css'
 
 export default function SignIn(props) {
   const [formValues, setFormValues] = useState({ email: '', password: '' })
