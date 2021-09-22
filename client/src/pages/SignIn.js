@@ -14,11 +14,12 @@ export default function SignIn(props) {
     setFormValues({ email: '', password: '' })
     props.setUser(payload)
     props.toggleAuthenticated(true)
-    props.history.push('/feed')
+    props.history.push('/')
   }
 
   return (
     <div className="signin col">
+      <p>Hello World</p>
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
