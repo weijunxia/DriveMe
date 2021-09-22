@@ -32,10 +32,6 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         allowNull: false
       },
-      is_renter: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false
-      },
       createdAt: {
         field: 'created_at',
         allowNull: false,

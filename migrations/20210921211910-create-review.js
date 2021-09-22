@@ -26,6 +26,10 @@ module.exports = {
           key: 'id'
         }
       },
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       rating: {
         type: Sequelize.INTEGER,
         allowNull: false

@@ -11,8 +11,7 @@ module.exports = {
           password_digest: 'password123',
           picture:
             'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
-          is_owner: true,
-          is_renter: false
+          is_owner: true
         },
         {
           name: 'Jennifer Lopez',
@@ -20,8 +19,7 @@ module.exports = {
           password_digest: 'password123',
           picture:
             'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
-          is_owner: true,
-          is_renter: false
+          is_owner: true
         },
         {
           name: 'Brenda Smith',
@@ -29,8 +27,7 @@ module.exports = {
           password_digest: 'password123',
           picture:
             'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
-          is_owner: true,
-          is_renter: false
+          is_owner: true
         },
         {
           name: 'Jeffrey Wang',
@@ -38,8 +35,7 @@ module.exports = {
           password_digest: 'password123',
           picture:
             'https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg',
-          is_owner: true,
-          is_renter: false
+          is_owner: true
         }
       ],
       {}
