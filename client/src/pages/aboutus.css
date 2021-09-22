@@ -1,9 +1,29 @@
 .top {
   background-image: url('https://www.phdmedia.com/venezuela/wp-content/uploads/sites/101/2017/06/Banner-2.gif');
   width: 100%;
+  height: 500px;
+  background-size: cover;
 }
 
 h1 {
   text-align: center;
   color: white;
+  font-size: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.text {
+  width: 450px;
+  padding-top: 60px;
+}
+
+.blurb {
+  color: white;
+  line-height: 2;
 }
