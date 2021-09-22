@@ -1,4 +1,4 @@
-const { Car, Bookings } = require('../models')
+const { Car, Bookings, Review } = require('../models')
 
 const GetCars = async (req, res) => {
   try {
@@ -12,7 +12,7 @@ const GetCars = async (req, res) => {
 const GetCarProfile = async (req, res) => {
   try {
     const carAndBooks = await Car.findByPk(req.params.id, {
-      include: [{ model: Bookings }]
+      include: [{ model: Bookings, model: Review }]
     })
     res.send(carAndBooks)
   } catch (error) {
