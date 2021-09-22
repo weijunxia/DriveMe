@@ -8,58 +8,75 @@ function PostCar(props) {
     car_pic: '',
     price: ''
   })
+  // const [pics, setPics] = useState({})
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
-  let x = ''
 
-  const addImageButton = (
-    <input
-      type="text"
-      name="car_pic"
-      onChange={handleChange}
-      defaultValue="Upload Picutres of Your Car!"
-    ></input>
-  )
+  // const addImageButton = (
+  //   <input
+  //     type="text"
+  //     name="car_pic"
+  //     onChange={handleChange}
+  //     defaultValue="Upload Picutres of Your Car!"
+  //   ></input>
+  // )
 
-  const onClick = (e) => {
-    x = addImageButton
-  }
+  // const onClick = (e) => {
+  //   setPics({ ...pics })
+  // }
 
   return (
     <div>
       <form onSubmit={(e) => props.handleSubmit(e, formData)}>
         <label for="make">Select a make:</label>
-        <select>
-          <option value="Tesla">Tesla</option>
+        <select name="make" onChange={handleChange} value={formData.make}>
+          <option>Tesla</option>
         </select>
         <label for="model">Select a model:</label>
-        <select>
-          <option value="Model S">Model S</option>
-          <option value="Model 3">Model 3</option>
-          <option value="Model X">Model X</option>
-          <option value="Model Y">Model Y</option>
+        <select name="model" onChange={handleChange} value={formData.model}>
+          <option>Model S</option>
+          <option>Model 3</option>
+          <option>Model X</option>
+          <option>Model Y</option>
         </select>
-        <label for="model">Select a Year:</label>
-        <select>
-          <option value="2012">2012</option>
-          <option value="2013">2013</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
+        <label for="year">Select a Year:</label>
+        <select name="year" onChange={handleChange} value={formData.year}>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
         </select>
-        {x}
-        <button
+
+        {/* <button
           onClick={(e) => {
             onClick()
           }}
-        />
+        >
+          Add More Photos
+        </button> */}
+        <input
+          type="text"
+          name="car_pic"
+          onChange={handleChange}
+          defaultValue="Upload Picutres of Your Car!"
+        ></input>
+        <h3>Price Per Night</h3>
+        <input
+          type="number"
+          name="price"
+          onChange={handleChange}
+          value={formData.price}
+        ></input>
+        <br></br>
+        <button type="submit">Post Your Car</button>
       </form>
     </div>
   )
