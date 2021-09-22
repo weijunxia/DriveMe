@@ -39,10 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       is_owner: {
         type: DataTypes.BOOLEAN,
         allowNull: false
-      },
-      is_renter: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false
       }
     },
     {
