@@ -4,22 +4,23 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import StarIcon from '@material-ui/icons/Star'
 import { GetCars } from '../services/CarServices'
 
-function SearchResults() {
-  const [cars, setCars] = useState([])
+function SearchResults(props) {
+  // const [cars, setCars] = useState([])
 
-  const getCars = async () => {
-    const data = await GetCars()
-    setCars(data)
-  }
+  // const getCars = async () => {
+  //   const data = await GetCars()
+  //   console.log(data)
+  //   setCars(data)
+  // }
 
-  useEffect(() => {
-    getCars()
-  }, [])
+  // useEffect(() => {
+  //   getCars()
+  // }, [])
 
   return (
     <div className="search_results">
       <div className="search_results_card">
-        {cars.map((car) => (
+        {props.cars.map((car) => (
           <div className="search_result_cars" key={car.id}>
             <img
               src={car.car_pic}
