@@ -22,8 +22,8 @@ function NavBar({ authenticated, user, handleLogOut }) {
   const publicOptions = (
     <nav>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/register">Register</NavLink>
-      <NavLink to="/login">Sign In</NavLink>
+      <NavLink to="/api/auth/register">Register</NavLink>
+      <NavLink to="/api/auth/login">Sign In</NavLink>
     </nav>
   )
   return (
@@ -36,12 +36,7 @@ function NavBar({ authenticated, user, handleLogOut }) {
         <SearchIcon />
       </div>
       <div className="navBar_right">
-        <Link to="/api/auth/register">
-          <p>Register</p>
-        </Link>
-        <Link to="/api/auth/login">
-          <p>Sign In</p>
-        </Link>
+        {authenticated && user ? authenticatedOptions : publicOptions}
         <Avatar />
       </div>
     </div>
