@@ -8,6 +8,9 @@ function Home(props) {
   return (
     <div className="home">
       <Banner />
+      <div className="header">
+        <p>Home</p>
+      </div>
       <div className="homeSection">
         <Carousel>
           {props.cars.map((car) => (
