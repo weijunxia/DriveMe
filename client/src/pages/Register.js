@@ -84,8 +84,12 @@ export default function Register(props) {
             <p>
               Do you own a car and want to rent said your car and make passive
               income? Check this box to get started today!
+              <input
+                type="checkbox"
+                defaultChecked={false}
+                value={!formValues.is_owner}
+              />
             </p>
-            <Checkbox value={!formValues.is_owner} />
           </div>
         </div>
         <button

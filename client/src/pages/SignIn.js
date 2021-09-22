@@ -10,7 +10,6 @@ export default function SignIn(props) {
   }
 
   const handleSubmit = async (e) => {
-    console.log('props.history', props)
     e.preventDefault()
     const payload = await SignInUser(formValues)
     setFormValues({ email: '', password: '' })
@@ -45,7 +44,7 @@ export default function SignIn(props) {
             />
           </div>
           <button
-            className="input-wrapper"
+            className="signin button"
             disabled={!formValues.email || !formValues.password}
           >
             Sign In
