@@ -28,11 +28,11 @@ export default function Register(props) {
       password: formValues.password
     })
     setFormValues(iState)
-    props.history.push('/signin')
+    props.history.push('/login')
   }
 
   return (
-    <div className="signin col">
+    <div className="register col">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
@@ -85,7 +85,7 @@ export default function Register(props) {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Register
           </button>
         </form>
       </div>
