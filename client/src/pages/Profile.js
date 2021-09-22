@@ -1,23 +1,46 @@
 import React, { useEffect, useState } from 'react'
-import { GetCarById } from '../services/CarServices'
+import { GetCarsById, DeleteCar } from '../services/CarServices'
 
 function Profile(props) {
   const [userCars, setUserCars] = useState([])
 
   const handleCars = async () => {
-    const data = await GetCarById(props.user.id)
+    const data = await GetCarsById(props.user.id)
     setUserCars(data)
+  }
+
+  const onClick = async (e) => {
+    const data = await DeleteCar(e)
   }
 
   useEffect(() => {
     handleCars()
   }, [])
-  // test
+
   return (
     <div className="profile">
-      <div className="userCars">
+      <div className="user_profile">
+        {props.user.map((info) => (
+          <div className="profile_card" key={info.id}>
+            <div className="profile_picture">
+              <img src={info.picture} />
+            </div>
+            <div>{info.name}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="user_cars">
+        <h1> Your Garage </h1>
         {userCars.map((car) => (
-          <div className="carCard" key={car.id}>
+          <div className="car_card" key={car.id}>
+            <button
+              onClick={(e) => {
+                onClick()
+              }}
+            >
+              X
+            </button>
             <h3>
               {car.make}
               {car.model}

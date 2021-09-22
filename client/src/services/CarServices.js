@@ -8,7 +8,32 @@ export const GetCars = async () => {
     throw error
   }
 }
+export const PostNewCar = async (data) => {
+  try {
+    const res = await Client.post('/cars', data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
 
+export const UpdateCar = async (data) => {
+  try {
+    const res = await Client.put('', data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const DeleteCar = async (data) => {
+  try {
+    const res = await Client.delete('', data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
 export const GetCarsById = async () => {
   try {
     const res = await Client.get('/cars/:id')

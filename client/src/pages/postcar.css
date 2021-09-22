@@ -1,0 +1,10 @@
+.post_car {
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.post_car_form {
+  display: flex;
+  flex-direction: column;
+}

@@ -8,11 +8,13 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 import PostCar from './pages/PostCar'
+import Profile from './pages/Profile'
+import AboutUs from './pages/AboutUs'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
 import axios from 'axios'
 import { BASE_URL } from './services/api'
-import { GetCars } from './services/CarServices'
+import { GetCars, PostNewCar } from './services/CarServices'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -25,15 +27,11 @@ function App(props) {
     setCars(data)
   }
 
-  useEffect(() => {
-    getCars()
-  }, [])
-
   const handleSubmit = async (e, formData) => {
     e.preventDefault()
-    const res = await axios.post(`${BASE_URL}/cars`, formData)
-    setCars(...cars, res.data.results)
-    props.history.push('/post-car')
+    const res = await PostNewCar(formData)
+    setCars(...cars, res.data)
+    // props.history.push('/post-car')
   }
   const handleLogOut = () => {
     setUser(null)
@@ -52,7 +50,9 @@ function App(props) {
     if (token) {
       checkToken()
     }
+    getCars()
   }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -82,13 +82,19 @@ function App(props) {
                   {...props}
                   cars={cars}
                   setCars={setCars}
-                  Q
                 />
               )}
             />
             <Route
               exact
-              path="/api/auth/login"
+              path="/profile"
+              component={(props) => (
+                <Profile {...props} user={user} cars={cars} />
+              )}
+            ></Route>
+            <Route
+              exact
+              path="/login"
               component={(props) => (
                 <SignIn
                   {...props}
@@ -97,15 +103,20 @@ function App(props) {
                 />
               )}
             />
-            <Route exact path="/api/auth/register" component={Register} />
+            <Route
+              exact
+              path="/register"
+              component={(props) => <Register {...props} />}
+            />
             {user && authenticated && (
               <ProtectedRoute
                 authenticated={authenticated}
                 user={user}
-                path={'/api/auth/login'}
+                path={'/login'}
                 component={SignIn}
               />
             )}
+            <Route exact path="/about" component={AboutUs}></Route>
           </Switch>
           <Footer />
         </Router>

@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import './postcar.css'
 
 function PostCar(props) {
   const [formData, setFormData] = useState({
-    make: '',
-    model: '',
-    year: '',
+    make: 'Tesla',
+    model: 'Model S',
+    year: '2012',
     car_pic: '',
+    description: '',
     price: ''
   })
   // const [pics, setPics] = useState({})
@@ -28,8 +30,11 @@ function PostCar(props) {
   // }
 
   return (
-    <div>
-      <form onSubmit={(e) => props.handleSubmit(e, formData)}>
+    <div className="post_car">
+      <form
+        onSubmit={(e) => props.handleSubmit(e, formData)}
+        className="post_car_form"
+      >
         <label for="make">Select a make:</label>
         <select name="make" onChange={handleChange} value={formData.make}>
           <option>Tesla</option>
@@ -54,21 +59,21 @@ function PostCar(props) {
           <option>2020</option>
           <option>2021</option>
         </select>
-
-        {/* <button
-          onClick={(e) => {
-            onClick()
-          }}
-        >
-          Add More Photos
-        </button> */}
+        <label>Upload a Picture of Your Car!</label>
         <input
           type="text"
           name="car_pic"
           onChange={handleChange}
-          defaultValue="Upload Picutres of Your Car!"
+          value={formData.car_pic}
         ></input>
-        <h3>Price Per Night</h3>
+        <label>Describe Your Car</label>
+        <input
+          type="text"
+          name="description"
+          onChange={handleChange}
+          value={formData.description}
+        ></input>
+        <label>Price Per Day:</label>
         <input
           type="number"
           name="price"
