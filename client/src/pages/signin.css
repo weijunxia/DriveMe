@@ -1,17 +1,23 @@
+.register col {
+  border: 2px solid black;
+  border-radius: 999px;
+}
+.col {
+  border: 2px solid black;
+  border-radius: 15px;
+}
 form label {
   align-self: flex-start;
 }
 
-.input-wrapper {
-  width: 80%;
-  margin: 0;
-  padding: 0;
-}
-
 .input-wrapper input {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: fit-content;
   padding: 0.6em 1.2em;
   margin: 0.5em auto;
-  width: 100%;
+  width: 25vw;
   border-color: var(--primary-bg);
   font-size: 1.1rem;
   outline: none;
@@ -26,7 +32,8 @@ form button {
   margin: 1em 0;
   color: var(--link-color-secondary);
   align-self: center;
-  width: 100%;
+  width: 25vw;
+  border-radius: 999px;
 }
 
 form button:hover {
@@ -46,7 +53,7 @@ form button:disabled {
   margin-top: 4em;
 }
 
-.col-4 {
+/* .col-4 {
   grid-template-columns: repeat(auto-fill, 400px);
 }
 
@@ -61,4 +68,4 @@ form button:disabled {
 
 .card img {
   width: 100%;
-}
+} */
