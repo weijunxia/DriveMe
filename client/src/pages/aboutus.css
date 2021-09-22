@@ -27,3 +27,14 @@ h1 {
   color: white;
   line-height: 2;
 }
+
+.line {
+  justify-content: center;
+  display: inline-flex;
+}
+
+.try {
+  justify-content: center;
+  display: flex;
+  padding-top: 60px;
+}

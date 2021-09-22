@@ -6,9 +6,11 @@ function AboutUs() {
   return (
     <div className="whole">
       <div className="top">
-        <div className="line">
-          <h1 className="title">About DriveMe</h1>
-          <img src={logo} />
+        <div className="try">
+          <div className="line">
+            <h1 className="title">About DriveMe</h1>
+            <img src={logo} />
+          </div>
         </div>
       </div>
       <div className="container">
