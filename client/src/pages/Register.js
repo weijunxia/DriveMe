@@ -1,6 +1,8 @@
+import { Checkbox } from '@material-ui/core'
 import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
-
+import MaterialUIForm from 'react-material-ui-form'
+import './register-signin.css'
 const iState = {
   name: '',
   email: '',
@@ -28,67 +30,72 @@ export default function Register(props) {
       password: formValues.password
     })
     setFormValues(iState)
-    props.history.push('/login')
+    props.history.push('/api/auth/login')
   }
 
   return (
     <div className="register col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="Your full name"
-              value={formValues.name}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
+      <form className="col" onSubmit={handleSubmit}>
+        <div className="input-wrapper">
+          <label htmlFor="name">Name</label>
+          <input
+            onChange={handleChange}
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            value={formValues.name}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="email">Email</label>
+          <input
+            onChange={handleChange}
+            name="email"
+            type="email"
+            placeholder="example@example.com"
+            value={formValues.email}
+            required
+          />
+        </div>
 
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
+        <div className="input-wrapper">
+          <label htmlFor="password">Password</label>
+          <input
+            onChange={handleChange}
+            type="password"
+            name="password"
+            value={formValues.password}
+            required
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input
+            onChange={handleChange}
+            type="password"
+            name="confirmPassword"
+            value={formValues.confirmPassword}
+            required
+          />
+          <div className="check box">
+            <p>
+              Do you own a car and want to rent said your car and make passive
+              income? Check this box to get started today!
+            </p>
+            <Checkbox />
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="confirmPassword"
-              value={formValues.confirmPassword}
-              required
-            />
-          </div>
-          <button
-            disabled={
-              !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
-            }
-          >
-            Register
-          </button>
-        </form>
-      </div>
+        </div>
+        <button
+          disabled={
+            !formValues.email ||
+            (!formValues.password &&
+              formValues.confirmPassword === formValues.password)
+          }
+        >
+          Register
+        </button>
+      </form>
     </div>
   )
 }

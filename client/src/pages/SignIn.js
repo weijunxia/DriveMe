@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { SignInUser } from '../services/Auth'
+import './register-signin.css'
 
 export default function SignIn(props) {
   const [formValues, setFormValues] = useState({ email: '', password: '' })
@@ -19,7 +20,6 @@ export default function SignIn(props) {
 
   return (
     <div className="signin col">
-      <p>Hello World</p>
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
@@ -43,7 +43,10 @@ export default function SignIn(props) {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button
+            className="input-wrapper"
+            disabled={!formValues.email || !formValues.password}
+          >
             Sign In
           </button>
         </form>
