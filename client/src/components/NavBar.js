@@ -11,6 +11,9 @@ function NavBar({ authenticated, user, handleLogOut }) {
   if (user) {
     authenticatedOptions = (
       <nav>
+        <NavLink>
+          <button>Become A Host</button>
+        </NavLink>
         <h3>Welcome {user.email}!</h3>
         <NavLink onClick={handleLogOut} to="/">
           Sign Out
@@ -22,6 +25,9 @@ function NavBar({ authenticated, user, handleLogOut }) {
   const publicOptions = (
     <nav>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/post-car">
+        <button>Become A Host</button>
+      </NavLink>
       <NavLink to="/api/auth/register">Register</NavLink>
       <NavLink to="/api/auth/login">Sign In</NavLink>
     </nav>

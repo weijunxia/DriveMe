@@ -4,13 +4,13 @@ import Cards from '../components/Cards'
 import Carousel from 'react-material-ui-carousel'
 import './home.css'
 
-function Home() {
+function Home(props) {
   return (
     <div className="home">
       <Banner />
       <div className="homeSection">
         <Carousel>
-          {/* {cars.map((car) => (
+          {/* {props.cars.map((car) => (
             <Cards
               car_pic={car.car_pic}
               make={car.make}
