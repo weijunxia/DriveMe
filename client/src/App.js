@@ -46,6 +46,7 @@ function App(props) {
     const session = await CheckSession()
     setUser(session)
     toggleAuthenticated(true)
+    localStorage.setItem('authenticated', '1')
   }
 
   useEffect(() => {
@@ -53,7 +54,7 @@ function App(props) {
     if (token) {
       checkToken()
     }
-    getCars()
+    // getCars()
   }, [])
 
   return (
