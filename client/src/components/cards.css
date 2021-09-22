@@ -2,7 +2,7 @@
   /* min-width: 30px;
   min-height:20px; */
   object-fit:fill;
-  width:30%;
+  width:100%;
   border-radius:5px;
   height:100%;
   display:block;
@@ -10,23 +10,27 @@
   margin-right: auto;
 }
 .cards {
-  margin:15px;
+  margin:50px;
   overflow:hidden;
   border-radius:5px;
   cursor:pointer;
+  /* margin: 100px;    */
+  box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);
 }
 
 .cards_info{
   margin-top:1px;
   border-radius: 10px;
   padding:10px;
-
+  border:5;
 }
 
 .cards_info >h2 {
 font-size: 18px;
 font-weight:500;
 margin-bottom: 5px;
+margin-top:5px;
+text-align: center;
 }
 
 
