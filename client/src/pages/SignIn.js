@@ -10,7 +10,6 @@ export default function SignIn(props) {
   }
 
   const handleSubmit = async (e) => {
-    console.log('props.history', props)
     e.preventDefault()
     const payload = await SignInUser(formValues)
     setFormValues({ email: '', password: '' })

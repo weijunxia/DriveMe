@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { GetCarsById, DeleteCar } from '../services/CarServices'
+import { GetProfile } from '../services/UserServices'
 
 function Profile(props) {
   const [userCars, setUserCars] = useState([])
@@ -9,8 +10,8 @@ function Profile(props) {
     setUserCars(data)
   }
 
-  const onClick = async (e) => {
-    const data = await DeleteCar(e)
+  const onClick = async (id) => {
+    const data = await DeleteCar(id)
   }
 
   useEffect(() => {
@@ -20,23 +21,23 @@ function Profile(props) {
   return (
     <div className="profile">
       <div className="user_profile">
-        {props.user.map((info) => (
+        {props.userInfo.map((info) => (
           <div className="profile_card" key={info.id}>
             <div className="profile_picture">
-              <img src={info.picture} />
+              {/* <img src={info.picture} /> */}
             </div>
-            <div>{info.name}</div>
+            <div>{info.email}</div>
           </div>
         ))}
       </div>
-
+      {/* 
       <div className="user_cars">
         <h1> Your Garage </h1>
         {userCars.map((car) => (
           <div className="car_card" key={car.id}>
             <button
-              onClick={(e) => {
-                onClick()
+              onClick={() => {
+                onClick(car.id)
               }}
             >
               X
@@ -50,8 +51,8 @@ function Profile(props) {
             <p>{car.description}</p>
             <h3>{car.price}</h3>
           </div>
-        ))}
-      </div>
+        ))} */}
+      {/* </div> */}
     </div>
   )
 }
