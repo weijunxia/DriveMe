@@ -54,7 +54,7 @@ function App(props) {
     if (token) {
       checkToken()
     }
-    // getCars()
+    getCars()
   }, [])
 
   return (
