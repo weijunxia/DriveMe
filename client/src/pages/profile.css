@@ -17,9 +17,12 @@
 .avatar {
   height: 100px !important;
   width: 100px !important;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 .user_profile_name {
   font-size: 40px;
+  margin-left:20px;
 }
 
 .user_cars > h1 {
@@ -45,4 +48,10 @@
   max-height: 60vh;
   border-radius: 5px;
   overflow: hidden;
+  display:block;
+  margin-right: auto;
+  margin-left:auto;
+}
+.user_car_card > h3 {
+  text-align: center;
 }
