@@ -50,3 +50,14 @@ h1{
   background-color: black;
 }
 
+.body > button {
+  background-color: #b39f19;
+  color:white;
+  text-transform: inherit;
+  font-weight: 600;
+}
+
+.body > button:hover {
+  background-color: white;
+  color: #b39f19;
+}

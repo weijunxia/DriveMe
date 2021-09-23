@@ -38,16 +38,21 @@ function Profile(props) {
             {' '}
             {userCars.map((car) => (
               <div className="user_car_card" key={car.id}>
-                <p
+                <button
+                  className="remove"
                   onClick={() => {
                     onClick(car.id)
                   }}
-                  style={{ border: '1px black solid', cursor: 'pointer' }}
+                  style={{ cursor: 'pointer' }}
                 >
                   Remove Your Listing
-                </p>
-                <NavLink to={`/profile/cars/${car.id}`}>
-                  Edit Your Listing!
+                </button>
+                <NavLink
+                  className="edit"
+                  to={`/profile/cars/${car.id}`}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <button>Edit Your Listing!</button>
                 </NavLink>
                 <h3>
                   {car.make} {car.year} {car.model}
