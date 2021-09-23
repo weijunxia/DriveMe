@@ -22,6 +22,7 @@ export default function SignIn(props) {
     <div className="signin col">
       <div className="card-overlay centered">
         <div className="background">
+          <h2 className="title_signin">Sign In and Drive Now</h2>
           <form className="col" onSubmit={handleSubmit}>
             <div className="input-wrapper">
               <label htmlFor="email">Email</label>
@@ -45,7 +46,7 @@ export default function SignIn(props) {
               />
             </div>
             <button
-              className="signin button"
+              className="signin_button"
               disabled={!formValues.email || !formValues.password}
             >
               Sign In

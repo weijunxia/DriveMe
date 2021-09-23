@@ -37,13 +37,14 @@ export default function Register(props) {
 
   return (
     <div className="register col">
+      <h2 className="title_register">Register to Find Your Next Ride</h2>
       <form className="col" onSubmit={handleSubmit}>
         <div className="input-wrapper">
           <label htmlFor="name">Name</label>
           <input
             onChange={handleChange}
             name="name"
-            type="text"
+            type="name"
             placeholder="Your full name"
             value={formValues.name}
             required
@@ -93,6 +94,7 @@ export default function Register(props) {
           </div>
         </div>
         <button
+          className="register_button"
           disabled={
             !formValues.email ||
             (!formValues.password &&
