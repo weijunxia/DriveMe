@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './postcar.css'
 
 function PostCar(props) {
+  console.log(props)
   const [formData, setFormData] = useState({
     make: 'Tesla',
     model: 'Model S',
     year: '2012',
     car_pic: '',
     description: '',
-    price: ''
+    price: '',
+    userId: props.userInfo.id
   })
-  // const [pics, setPics] = useState({})
+
+  // useEffect(() => {
+  //   setFormData({ ...formData, userId: props.userInfo.id })
+  // }, [props.userInfo])
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
