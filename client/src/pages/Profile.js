@@ -46,6 +46,7 @@ function Profile(props) {
                   style={{ cursor: 'pointer' }}
                 >
                   Remove Your Listing
+
                 </button>
                 <NavLink
                   className="edit"
@@ -53,6 +54,7 @@ function Profile(props) {
                   style={{ textDecoration: 'none' }}
                 >
                   <button>Edit Your Listing!</button>
+
                 </NavLink>
                 <h3>
                   {car.make} {car.year} {car.model}

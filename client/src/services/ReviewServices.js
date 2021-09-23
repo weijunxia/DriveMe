@@ -17,3 +17,12 @@ export const GetAllReviewsByUser = async (userId) => {
     throw error
   }
 }
+
+export const PostNewReview = async (data) => {
+  try {
+    const res = await Client.post('/reviews', data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}

@@ -3,45 +3,29 @@ import { GetCarsById, UpdateCar } from '../services/CarServices'
 import { withRouter } from 'react-router-dom'
 
 function EditCar(props) {
-  const [updatedCar, setUpdatedCar] = useState({
-    // make: props.userInfo.make,
-    // model: props.userInfo.model,
-    // year: props.userInfo.year,
-    // description: props.userInfo.description,
-    // car_pic: props.userInfo.car_pic,
-    // price: props.userInfo.price,
-    // userId: props.userInfo.id
-    make: '',
-    model: '',
-    year: '',
-    description: '',
-    car_pic: '',
-    price: '',
-    userId: ''
-  })
+  const [updatedCar, setUpdatedCar] = useState({})
 
   useEffect(() => {
     const car = GetCarsById(props.match.params.id)
     setUpdatedCar(car)
-    console.log(props)
   }, [])
 
-  const handleCarChange = async (e) => {
-    await setUpdatedCar({ ...updatedCar, [e.target.name]: e.target.value })
+  const handleCarChange = (e) => {
+    setUpdatedCar({ ...updatedCar, [e.target.name]: e.target.value })
   }
 
   const handleUpdateSubmit = async (e) => {
     e.preventDefault()
     const newUpdatedCar = {
-      make: updatedCar.make,
+      make: 'Tesla',
       model: updatedCar.model,
-      year: updatedCar.year,
+      year: parseInt(updatedCar.year),
       description: updatedCar.description,
       car_pic: updatedCar.car_pic,
-      price: updatedCar.price,
-      userId: updatedCar.userId
+      price: parseInt(updatedCar.price)
     }
-    const res = await UpdateCar(updatedCar.userId, newUpdatedCar)
+    console.log('newUpdatedCar', newUpdatedCar)
+    const res = await UpdateCar(props.match.params.id, newUpdatedCar)
     if (res.status === 200) {
       props.history.push('/profile')
     }
