@@ -26,17 +26,17 @@ export const UpdateCar = async (data) => {
   }
 }
 
-export const DeleteCar = async (data) => {
+export const DeleteCar = async (id) => {
   try {
-    const res = await Client.delete('', data)
+    const res = await Client.delete(`/cars/${id}`)
     return res.data
   } catch (error) {
     throw error
   }
 }
-export const GetCarsById = async () => {
+export const GetCarsById = async (id) => {
   try {
-    const res = await Client.get('/cars/:id')
+    const res = await Client.get(`/cars/${id}`)
     return res.data
   } catch (error) {
     throw error

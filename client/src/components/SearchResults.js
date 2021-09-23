@@ -5,18 +5,6 @@ import StarIcon from '@material-ui/icons/Star'
 import { GetCars } from '../services/CarServices'
 
 function SearchResults(props) {
-  // const [cars, setCars] = useState([])
-
-  // const getCars = async () => {
-  //   const data = await GetCars()
-  //   console.log(data)
-  //   setCars(data)
-  // }
-
-  // useEffect(() => {
-  //   getCars()
-  // }, [])
-
   return (
     <div className="search_results">
       <div className="search_results_card">

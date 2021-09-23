@@ -5,30 +5,45 @@ import SearchIcon from '@material-ui/icons/Search'
 import logo from '../images/DriveMe.png'
 import { Avatar } from '@material-ui/core'
 import { Link, NavLink } from 'react-router-dom'
+import { GetProfile } from '../services/UserServices'
 
 function NavBar({ authenticated, user, handleLogOut }) {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <nav>
+      <nav className="navBar_right">
+        <h3>Welcome {user.email}!</h3>
         <NavLink to="/post-car">
           <button>Become A Host</button>
         </NavLink>
-        <h3>Welcome {user.name}!</h3>
-        <NavLink onClick={handleLogOut} to="/">
+        <NavLink
+          onClick={handleLogOut}
+          to="/"
+          style={{
+            textDecoration: 'none',
+            color: 'black',
+            border: '1px black solid'
+          }}
+        >
           Sign Out
+        </NavLink>
+        <NavLink to="/profile">
+          <Avatar />
         </NavLink>
       </nav>
     )
   }
 
   const publicOptions = (
-    <nav>
+    <nav className="navBar_right">
       <NavLink to="/register">
         <button>Become A Host</button>
       </NavLink>
       <NavLink to="/register">Register</NavLink>
       <NavLink to="/login">Sign In</NavLink>
+      <NavLink to="/register">
+        <Avatar />
+      </NavLink>
     </nav>
   )
   return (
@@ -42,7 +57,6 @@ function NavBar({ authenticated, user, handleLogOut }) {
       </div>
       <div className="navBar_right">
         {authenticated && user ? authenticatedOptions : publicOptions}
-        <Avatar />
       </div>
     </div>
   )
