@@ -14,7 +14,6 @@ const GetUserProfile = async (req, res) => {
     const userAndCars = await User.findByPk(req.params.id, {
       include: [{ model: Review }, { model: Car }]
     })
-    console.log(req.params)
     res.send(userAndCars)
   } catch (error) {
     throw error

@@ -35,6 +35,7 @@ function App(props) {
     const data = await GetProfile(user.id)
     setUserInfo(data)
   }
+
   useEffect(() => {
     getCars()
     getUserProfile()
@@ -103,7 +104,7 @@ function App(props) {
               exact
               path="/profile"
               component={(props) => (
-                <Profile {...props} user={user} cars={cars} />
+                <Profile {...props} userInfo={userInfo} cars={cars} />
               )}
             ></Route>
             <Route

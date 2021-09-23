@@ -4,9 +4,10 @@ import { GetProfile } from '../services/UserServices'
 
 function Profile(props) {
   const [userCars, setUserCars] = useState([])
+  console.log('props1', props)
 
   const handleCars = async () => {
-    const data = await GetCarsById(props.user.id)
+    const data = await GetCarsById(props.userInfo.id)
     setUserCars(data)
   }
 
@@ -21,16 +22,9 @@ function Profile(props) {
   return (
     <div className="profile">
       <div className="user_profile">
-        {props.userInfo.map((info) => (
-          <div className="profile_card" key={info.id}>
-            <div className="profile_picture">
-              {/* <img src={info.picture} /> */}
-            </div>
-            <div>{info.email}</div>
-          </div>
-        ))}
+        <div className="user_profile_name">{props.userInfo.name}</div>
       </div>
-      {/* 
+
       <div className="user_cars">
         <h1> Your Garage </h1>
         {userCars.map((car) => (
@@ -51,8 +45,8 @@ function Profile(props) {
             <p>{car.description}</p>
             <h3>{car.price}</h3>
           </div>
-        ))} */}
-      {/* </div> */}
+        ))}
+      </div>
     </div>
   )
 }
