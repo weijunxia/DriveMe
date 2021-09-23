@@ -81,11 +81,14 @@ export default function Register(props) {
             value={formValues.confirmPassword}
             required
           />
-          <div className="check box">
+          <div className="check_box">
+            <p className="host_blurb">
+              Do you own a car and want to rent said your car and make
+            </p>
             <p>
-              Do you own a car and want to rent said your car and make passive
-              income? Check this box to get started today!
+              passive income? Check this box to get started today!
               <input
+                className="box"
                 type="checkbox"
                 defaultChecked={false}
                 value={!formValues.is_owner}
