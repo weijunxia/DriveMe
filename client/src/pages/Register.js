@@ -1,4 +1,3 @@
-import { Checkbox } from '@material-ui/core'
 import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import './register-signin.css'
@@ -38,7 +37,7 @@ export default function Register(props) {
   return (
     <div className="register col">
       <div className="form_height">
-        <div className="form_wrapper">
+        <div className="form_wrapper3">
           <h2 className="title_register">Register to Find Your Next Ride</h2>
           <form className="col" onSubmit={handleSubmit}>
             <div className="input-wrapper">

@@ -21,7 +21,7 @@ export default function SignIn(props) {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
-        <div className="background">
+        <div className="form_wrapper">
           <h2 className="title_signin">Sign In and Drive Now</h2>
           <form className="col" onSubmit={handleSubmit}>
             <div className="input-wrapper">
