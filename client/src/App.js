@@ -15,19 +15,31 @@ import ProtectedRoute from './components/ProtectedRoute'
 import axios from 'axios'
 import { BASE_URL } from './services/api'
 import { GetCars, PostNewCar } from './services/CarServices'
+import { GetProfile } from './services/UserServices'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
     false || localStorage.getItem('authenticated')
   )
   const [user, setUser] = useState(null)
+  const [userInfo, setUserInfo] = useState([])
   const [cars, setCars] = useState([])
 
   const getCars = async () => {
     const data = await GetCars()
-    console.log(data)
     setCars(data)
   }
+
+  const getUserProfile = async () => {
+    if (!user) return
+    const data = await GetProfile(user.id)
+    setUserInfo(data)
+  }
+
+  useEffect(() => {
+    getCars()
+    getUserProfile()
+  }, [user])
 
   const handleSubmit = async (e, formData) => {
     e.preventDefault()
@@ -54,7 +66,6 @@ function App(props) {
     if (token) {
       checkToken()
     }
-    getCars()
   }, [])
 
   return (
@@ -85,6 +96,7 @@ function App(props) {
                   handleSubmit={handleSubmit}
                   {...props}
                   cars={cars}
+                  userInfo={userInfo}
                   setCars={setCars}
                 />
               )}
@@ -93,7 +105,7 @@ function App(props) {
               exact
               path="/profile"
               component={(props) => (
-                <Profile {...props} user={user} cars={cars} />
+                <Profile {...props} userInfo={userInfo} cars={cars} />
               )}
             ></Route>
             <Route
