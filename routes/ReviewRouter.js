@@ -16,4 +16,18 @@ router.delete(
   controller.DeleteReview
 )
 
+router.get(
+  '/album/:album_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.GetAllReviewsOneCar
+)
+
+router.get(
+  '/user/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.GetAllReviewsOneUser
+)
+
 module.exports = router

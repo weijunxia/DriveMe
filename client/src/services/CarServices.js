@@ -17,9 +17,9 @@ export const PostNewCar = async (data) => {
   }
 }
 
-export const UpdateCar = async (data) => {
+export const UpdateCar = async (id, data) => {
   try {
-    const res = await Client.put('', data)
+    const res = await Client.put(`/cars/${id}`, data)
     return res.data
   } catch (error) {
     throw error
