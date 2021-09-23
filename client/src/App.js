@@ -96,6 +96,7 @@ function App(props) {
                   handleSubmit={handleSubmit}
                   {...props}
                   cars={cars}
+                  userInfo={userInfo}
                   setCars={setCars}
                 />
               )}
