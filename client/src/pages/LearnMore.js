@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './learnmore.css'
-
+import { NavLink } from 'react-router-dom'
+import SearchResults from '../components/SearchResults'
+import Search from './Search'
+import { Button } from '@material-ui/core'
+import { useHistory } from 'react-router'
 function LearnMore() {
+  const history = useHistory()
+  const [showSearch, setShowSearch] = useState(false)
+
   return (
     <div className="body">
       <div className="up"></div>
-      {/* <Search /> */}
+      <div className="bannerSearch">
+        <Button
+          onClick={() => setShowSearch(!showSearch)}
+          className="searchButton"
+          variant="outlined"
+        >
+          {showSearch ? 'Hide' : 'Search Dates'}
+        </Button>
+        {showSearch && <Search />}
+      </div>
       <div className="container1">
         <div className="text0">
           <h2>How DriveMe works</h2>
@@ -24,7 +40,9 @@ function LearnMore() {
           </ul>
         </div>
       </div>
- 
+      <Button onClick={() => history.push('/search')} variant="outlined">
+        Book a car
+      </Button>
     </div>
   )
 }
