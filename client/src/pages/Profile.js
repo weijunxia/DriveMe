@@ -46,7 +46,12 @@ function Profile(props) {
                 >
                   Remove Your Listing
                 </p>
-                <NavLink to={`/profile/cars/${car.id}`}>
+                <NavLink
+                  to={{
+                    pathname: `/profile/cars/${car.id}`,
+                    state: { userCars }
+                  }}
+                >
                   Edit Your Listing!
                 </NavLink>
                 <h3>
