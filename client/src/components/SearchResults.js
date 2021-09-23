@@ -3,7 +3,6 @@ import './searchResults.css'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import StarIcon from '@material-ui/icons/Star'
 import { NavLink } from 'react-router-dom'
-import { GetCars } from '../services/CarServices'
 
 function SearchResults(props) {
   return (
