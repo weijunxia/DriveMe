@@ -13,10 +13,9 @@ import AboutUs from './pages/AboutUs'
 import LearnMore from './pages/LearnMore'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
-import axios from 'axios'
-import { BASE_URL } from './services/api'
 import { GetCars, PostNewCar } from './services/CarServices'
 import { GetProfile } from './services/UserServices'
+import { withRouter } from 'react-router-dom'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -46,7 +45,8 @@ function App(props) {
     e.preventDefault()
     const res = await PostNewCar(formData)
     setCars(...cars, res.data)
-    // props.history.push('/post-car')
+    props.history.push('/profile')
+    props.history.go('/profile')
   }
 
   const handleLogOut = () => {
@@ -106,9 +106,14 @@ function App(props) {
               exact
               path="/profile"
               component={(props) => (
-                <Profile {...props} userInfo={userInfo} cars={cars} />
+                <Profile
+                  {...props}
+                  userInfo={userInfo}
+                  getUserProfile={getUserProfile}
+                  cars={cars}
+                />
               )}
-            ></Route>
+            />
             <Route
               exact
               path="/login"
@@ -143,4 +148,4 @@ function App(props) {
   )
 }
 
-export default App
+export default withRouter(App)

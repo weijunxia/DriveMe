@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import './postcar.css'
 
 function PostCar(props) {
-  console.log(props)
   const [formData, setFormData] = useState({
     make: 'Tesla',
     model: 'Model S',
@@ -92,4 +92,4 @@ function PostCar(props) {
   )
 }
 
-export default PostCar
+export default withRouter(PostCar)
