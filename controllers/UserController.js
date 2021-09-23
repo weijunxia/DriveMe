@@ -12,7 +12,7 @@ const GetAllUserProfiles = async (req, res) => {
 const GetUserProfile = async (req, res) => {
   try {
     const userAndCars = await User.findByPk(req.params.id, {
-      include: [{ model: Car, model: Review }]
+      include: [{ model: Review }, { model: Car }]
     })
     console.log(req.params)
     res.send(userAndCars)

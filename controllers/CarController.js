@@ -12,7 +12,7 @@ const GetCars = async (req, res) => {
 const GetCarProfile = async (req, res) => {
   try {
     const carAndBooks = await Car.findByPk(req.params.id, {
-      include: [{ model: Bookings, model: Review }]
+      include: [{ model: Bookings }, { model: Review }]
     })
     res.send(carAndBooks)
   } catch (error) {
