@@ -8,3 +8,9 @@
   text-align: center;
   flex-direction: column;
 } */
+
+
+.homeSection > p {
+  text-align: center;
+  font-size: 20px;
+}

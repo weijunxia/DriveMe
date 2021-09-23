@@ -8,7 +8,6 @@ function Home(props) {
   return (
     <div className="home">
       <Banner />
-      <div className="header"></div>
       <div className="homeSection">
         <p>Home</p>
         <Carousel>

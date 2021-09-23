@@ -10,6 +10,7 @@ import SignIn from './pages/SignIn'
 import PostCar from './pages/PostCar'
 import Profile from './pages/Profile'
 import AboutUs from './pages/AboutUs'
+import LearnMore from './pages/LearnMore'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
 import axios from 'axios'
@@ -131,6 +132,7 @@ function App(props) {
               />
             )}
             <Route exact path="/about" component={AboutUs}></Route>
+            <Route exact path="/learn" component={LearnMore}></Route>
           </Switch>
           <Footer />
         </Router>
