@@ -1,0 +1,12 @@
+.up {
+background-image: url("../images/tesla.png");
+position: relative;
+height: 55vh;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h1{
+  text-align: center;
+  color:black;
+}
