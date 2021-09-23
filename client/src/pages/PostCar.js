@@ -13,26 +13,9 @@ function PostCar(props) {
     userId: props.userInfo.id
   })
 
-  // useEffect(() => {
-  //   setFormData({ ...formData, userId: props.userInfo.id })
-  // }, [props.userInfo])
-
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
-
-  // const addImageButton = (
-  //   <input
-  //     type="text"
-  //     name="car_pic"
-  //     onChange={handleChange}
-  //     defaultValue="Upload Picutres of Your Car!"
-  //   ></input>
-  // )
-
-  // const onClick = (e) => {
-  //   setPics({ ...pics })
-  // }
 
   return (
     <div className="post_car">
