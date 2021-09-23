@@ -38,3 +38,7 @@ h1 {
   display: flex;
   padding-top: 60px;
 }
+
+.title {
+  color: white;
+}
