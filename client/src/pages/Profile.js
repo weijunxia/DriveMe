@@ -24,37 +24,35 @@ function Profile(props) {
 
   return (
     <div className="profile">
-      <div className="user_profile">
+      <div className="user_profile_top">
         <img src={Banner} className="profile_banner"></img>
         <Avatar className="avatar" />
         <div className="user_profile_name">{props.userInfo.name}</div>
         <div className="user_profile"></div>
       </div>
       <div className="user_cars">
-        <h1> YOUR garage</h1>
+        <h1> YOUR Garage</h1>
         {userCars && (
           <div>
             {' '}
             {userCars.map((car) => (
-              <div className="car_card" key={car.id}>
+              <div className="user_car_card" key={car.id}>
                 <button
                   onClick={() => {
                     onClick(car.id)
                   }}
                 >
-                  X
+                  Remove Your Listing
                 </button>
                 <h3>
-                  {car.make}
-                  {car.model}
-                  {car.year}
+                  {car.make} {car.year} {car.model}
                 </h3>
                 <img
                   src={car.car_pic}
                   alt={`${car.make}${car.model}${car.year}`}
                 />
                 <p>{car.description}</p>
-                <h3>{car.price}</h3>
+                <h3>${car.price}/day</h3>
               </div>
             ))}
           </div>

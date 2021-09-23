@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.user_profile {
+.user_profile_top {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -17,4 +17,32 @@
 .avatar {
   height: 100px !important;
   width: 100px !important;
+}
+.user_profile_name {
+  font-size: 40px;
+}
+
+.user_cars > h1 {
+  color: black;
+}
+
+.user_car_card {
+  display: flex;
+  flex-direction: column;
+  border: lightgray 1px solid;
+}
+
+.user_car_card > button {
+  position: relative;
+  top: 1px;
+  right: 1px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.user_car_card > img {
+  max-width: 80vw;
+  max-height: 60vh;
+  border-radius: 5px;
+  overflow: hidden;
 }
