@@ -6,13 +6,14 @@
 }
 
 .bannerInfo {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 25vh;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 40px;
   width: 30vw;
+  height: 30vh;
 }
 
 .bannerInfo > button {
@@ -22,9 +23,12 @@
   margin-top: 20px;
   font-weight: 600;
 }
-
+.bannerInfo > h1 {
+  color: white;
+}
 .bannerInfo > h5 {
   margin-top: 10px;
+  font-size: 25px;
 }
 
 .bannerInfo > button:hover {
