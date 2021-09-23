@@ -37,67 +37,78 @@ export default function Register(props) {
 
   return (
     <div className="register col">
-      <form className="col" onSubmit={handleSubmit}>
-        <div className="input-wrapper">
-          <label htmlFor="name">Name</label>
-          <input
-            onChange={handleChange}
-            name="name"
-            type="text"
-            placeholder="Your full name"
-            value={formValues.name}
-            required
-          />
-        </div>
-        <div className="input-wrapper">
-          <label htmlFor="email">Email</label>
-          <input
-            onChange={handleChange}
-            name="email"
-            type="email"
-            placeholder="example@example.com"
-            value={formValues.email}
-            required
-          />
-        </div>
+      <div className="form_height">
+        <div className="form_wrapper">
+          <h2 className="title_register">Register to Find Your Next Ride</h2>
+          <form className="col" onSubmit={handleSubmit}>
+            <div className="input-wrapper">
+              <label htmlFor="name">Name</label>
+              <input
+                onChange={handleChange}
+                name="name"
+                type="name"
+                placeholder="Your full name"
+                value={formValues.name}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <label htmlFor="email">Email</label>
+              <input
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="example@example.com"
+                value={formValues.email}
+                required
+              />
+            </div>
 
-        <div className="input-wrapper">
-          <label htmlFor="password">Password</label>
-          <input
-            onChange={handleChange}
-            type="password"
-            name="password"
-            value={formValues.password}
-            required
-          />
+            <div className="input-wrapper">
+              <label htmlFor="password">Password</label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="confirmPassword"
+                value={formValues.confirmPassword}
+                required
+              />
+              <div className="check_box">
+                <p className="host_blurb">
+                  Do you own a car and want to rent said your car and make
+                  passive income? Check this box to get started today!
+                  <input
+                    className="box"
+                    type="checkbox"
+                    defaultChecked={false}
+                    value={!formValues.is_owner}
+                  />
+                </p>
+              </div>
+            </div>
+            <button
+              className="register_button"
+              disabled={
+                !formValues.email ||
+                (!formValues.password &&
+                  formValues.confirmPassword === formValues.password)
+              }
+            >
+              Register
+            </button>
+          </form>
         </div>
-        <div className="input-wrapper">
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
-            onChange={handleChange}
-            type="password"
-            name="confirmPassword"
-            value={formValues.confirmPassword}
-            required
-          />
-          <div className="check box">
-            <p>
-              Do you own a car and want to rent said your car and make passive
-              income? Check this box to get started today!
-            </p>
-            <Checkbox value={!formValues.is_owner} />
-          </div>
-        </div>
-        <button
-          disabled={
-            !formValues.email ||
-            (!formValues.password &&
-              formValues.confirmPassword === formValues.password)
-          }
-        >
-          Register
-        </button>
-      </form>
+      </div>
     </div>
   )
 }

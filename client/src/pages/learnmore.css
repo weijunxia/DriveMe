@@ -7,6 +7,11 @@ background-size: cover;
 }
 
 
+h1{
+  text-align: center;
+  color:black;
+}
+
 .container1{
   display: flex;
   align-items: center;
@@ -44,7 +49,4 @@ background-size: cover;
   background-image: url("../images/DriveMe.png");
   background-color: black;
 }
-    
 
-        
- 

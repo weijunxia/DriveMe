@@ -1,7 +1,5 @@
 import React from 'react'
 import './learnmore.css'
-// import Search from './Search'
-// import SearchResults from '../components/SearchResults'
 
 function LearnMore() {
   return (
@@ -26,7 +24,7 @@ function LearnMore() {
           </ul>
         </div>
       </div>
-      {/* <SearchResults /> */}
+ 
     </div>
   )
 }

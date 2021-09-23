@@ -7,7 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
+  position: relative;
+  width: 100vw;
 }
 
 .footer_left {
@@ -27,4 +28,7 @@
 
 .footer_right > .socialImg {
   margin-left: 15px;
+}
+.footer_right {
+  margin-right: 30px;
 }
