@@ -1,7 +1,6 @@
 import { Checkbox } from '@material-ui/core'
 import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
-// import MaterialUIForm from 'react-material-ui-form'
 import './register-signin.css'
 const iState = {
   name: '',

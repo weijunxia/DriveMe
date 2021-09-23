@@ -1,6 +1,10 @@
-.homeSection {
+/* .homeSection {
   display: flex;
-  padding: 30px;
-  margin:100px;
-  align-items: center;
-}
+ justify-content: center;
+} */
+/* 
+.header {
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+} */
