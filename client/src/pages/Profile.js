@@ -6,7 +6,7 @@ import { Avatar } from '@material-ui/core'
 import Banner from '../images/model-s-main-hero-desktop.png'
 import './profile.css'
 import { withRouter } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 function Profile(props) {
   const [userCars, setUserCars] = useState([])
 
@@ -38,13 +38,17 @@ function Profile(props) {
             {' '}
             {userCars.map((car) => (
               <div className="user_car_card" key={car.id}>
-                <button
+                <p
                   onClick={() => {
                     onClick(car.id)
                   }}
+                  style={{ border: '1px black solid', cursor: 'pointer' }}
                 >
                   Remove Your Listing
-                </button>
+                </p>
+                <NavLink to={`/profile/cars/${car.id}`}>
+                  Edit Your Listing!
+                </NavLink>
                 <h3>
                   {car.make} {car.year} {car.model}
                 </h3>
