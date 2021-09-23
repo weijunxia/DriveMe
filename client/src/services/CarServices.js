@@ -37,6 +37,7 @@ export const DeleteCar = async (id) => {
 export const GetCarsById = async (id) => {
   try {
     const res = await Client.get(`/cars/${id}`)
+    console.log(res.data)
     return res.data
   } catch (error) {
     throw error
