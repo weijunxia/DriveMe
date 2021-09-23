@@ -3,15 +3,7 @@ import { GetCarsById, UpdateCar } from '../services/CarServices'
 import { withRouter } from 'react-router-dom'
 
 function EditCar(props) {
-  const [updatedCar, setUpdatedCar] = useState({
-    // make: '',
-    // model: '',
-    // year: '',
-    // description: '',
-    // car_pic: '',
-    // price: '',
-    // userId: ''
-  })
+  const [updatedCar, setUpdatedCar] = useState({})
 
   useEffect(() => {
     const car = GetCarsById(props.match.params.id)
