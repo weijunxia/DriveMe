@@ -6,7 +6,47 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+
 h1{
   text-align: center;
   color:black;
 }
+
+.container1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text0 {
+  text-align: center;
+  font-size: 30px;
+}
+.text1{
+  padding-left: 30px;
+  margin: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2;
+}
+                
+ .text1 > ul li {
+  list-style: none;
+  padding-left: 50px;
+  position: relative;
+}
+
+.text1 > ul li:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-image: url("../images/DriveMe.png");
+  background-color: black;
+}
+
