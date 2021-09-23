@@ -1,3 +1,7 @@
+.post_car_form {
+  background: url('https://cleantechnica.com/files/2020/07/Tesla-Model-X-S-3-red-white-and-blue-David-Havasi-CleanTechnica.jpg');
+}
+
 .post_car {
   display: flex;
   font-size: 24px;
@@ -7,4 +11,8 @@
 .post_car_form {
   display: flex;
   flex-direction: column;
+  width: 31vw;
+}
+select {
+  width: 31vw;
 }

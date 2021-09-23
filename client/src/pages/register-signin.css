@@ -11,12 +11,23 @@ form {
   width: 100vw;
   height: 100vw;
 }
+.form_wrapper {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  width: 450px;
+  height: auto;
+}
+.form_height {
+  /* margin: auto; */
+}
 .register {
-  background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d4f29128-35ad-4912-9282-32701225c77b/bvlatuR/std/1920x1080/lhd-interior-hero-desktop');
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d4f29128-35ad-4912-9282-32701225c77b/bvlatuR/std/1920x1080/lhd-interior-hero-desktop');
+
   position: fixed;
-  opacity: 0.6;
+  /* background: rgba(0, 0, 0, 0.6); */
   width: 100vw;
   height: 100vw;
 }
