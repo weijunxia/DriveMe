@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { GetCarsById, DeleteCar } from '../services/CarServices'
 import { GetProfile } from '../services/UserServices'
+import { GetAllReviewsByUser } from '../services/ReviewServices'
 import { Avatar } from '@material-ui/core'
 import Banner from '../images/model-s-main-hero-desktop.png'
 import './profile.css'
