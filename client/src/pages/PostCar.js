@@ -54,6 +54,7 @@ function PostCar(props) {
             <UploadImageToS3WithReactS3 />
             <label>Upload a Picture of Your Car!</label>
             <input
+              className="car_description"
               type="text"
               name="car_pic"
               onChange={handleChange}
@@ -61,6 +62,7 @@ function PostCar(props) {
             ></input>
             <label>Describe Your Car</label>
             <input
+              className="car_description"
               type="text"
               name="description"
               onChange={handleChange}
@@ -68,6 +70,7 @@ function PostCar(props) {
             ></input>
             <label>Price Per Day:</label>
             <input
+              className="car_description"
               type="number"
               name="price"
               onChange={handleChange}

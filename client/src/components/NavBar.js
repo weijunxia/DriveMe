@@ -24,7 +24,7 @@ function NavBar({ authenticated, user, handleLogOut, props }) {
       <nav className="navBar_right">
         <h4>Welcome Friend!</h4>
         <NavLink to="/post-car">
-          <button className="host_button">Become a Host</button>
+          <button className="host_button">Upload Your Tesla</button>
         </NavLink>
         <NavLink
           className="signout"
