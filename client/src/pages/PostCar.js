@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import './postcar.css'
+import UploadImageToS3WithReactS3 from '../components/UploadImageToS3WithReactS3'
 
 function PostCar(props) {
   const [formData, setFormData] = useState({
@@ -50,6 +51,7 @@ function PostCar(props) {
               <option>2020</option>
               <option>2021</option>
             </select>
+            <UploadImageToS3WithReactS3 />
             <label>Upload a Picture of Your Car!</label>
             <input
               type="text"
