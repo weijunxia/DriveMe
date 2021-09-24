@@ -12,19 +12,11 @@ function NavBar({ authenticated, user, handleLogOut }) {
   if (user) {
     authenticatedOptions = (
       <nav className="navBar_right">
-        <h3>Welcome {user.email}!</h3>
+        <h4>Welcome Friend!</h4>
         <NavLink to="/post-car">
-          <button>Become A Host</button>
+          <button className="host_button">Become a Host</button>
         </NavLink>
-        <NavLink
-          onClick={handleLogOut}
-          to="/"
-          style={{
-            textDecoration: 'none',
-            color: 'black',
-            border: '1px black solid'
-          }}
-        >
+        <NavLink className="signout" onClick={handleLogOut} to="/">
           Sign Out
         </NavLink>
         <NavLink to="/profile">
@@ -37,7 +29,7 @@ function NavBar({ authenticated, user, handleLogOut }) {
   const publicOptions = (
     <nav className="navBar_right">
       <NavLink to="/register">
-        <button>Become A Host</button>
+        <button className="host_button">Become A Host</button>
       </NavLink>
       <NavLink to="/register">Register</NavLink>
       <NavLink to="/login">Sign In</NavLink>

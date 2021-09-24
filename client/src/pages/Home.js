@@ -10,20 +10,23 @@ function Home(props) {
   return (
     <div className="home">
       <Banner />
-      <div className="homeSection">
-        <p>Home</p>
-        {props.cars ? (
-          <Carousel>
-            {props.cars.map((car) => (
-              <Cards
-                car_pic={car.car_pic}
-                make={car.make}
-                model={car.model}
-                year={car.year}
-              />
-            ))}
-          </Carousel>
-        ) : null}
+      <div className="home_section">
+        <div className="carousel_wrapper">
+          <h1 className="title_carousel">Featured Cars</h1>
+          {props.cars ? (
+            <Carousel>
+              {props.cars.map((car) => (
+                <Cards
+                  className="carousel_cards1"
+                  car_pic={car.car_pic}
+                  make={car.make}
+                  model={car.model}
+                  year={car.year}
+                />
+              ))}
+            </Carousel>
+          ) : null}
+        </div>
       </div>
     </div>
   )

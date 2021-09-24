@@ -12,8 +12,10 @@
 .navBar_logo {
   background-color: black;
   object-fit: contain;
-  height: 50px;
-  margin-left: 20px;
+  height: 46px;
+  margin-left: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   border-radius: 100%;
 }
 
@@ -40,5 +42,20 @@
   align-items: center;
   justify-content: space-between;
   width: 40vw;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.signout {
+  text-decoration: none;
+  margin-left: 6px;
+}
+.host_button {
+  width: 10vw;
+  background-color: #b39f19;
+  color: white;
+  padding: 5px 9px;
+  margin: 7px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
