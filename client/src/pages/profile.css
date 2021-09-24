@@ -55,3 +55,27 @@
 .user_car_card > h3 {
   text-align: center;
 }
+
+.remove  {
+  background-color: #b39f19;
+  border-radius: 5px;
+  padding:5px;
+  color:white;
+  text-transform: inherit;
+  font-weight: 600;
+}
+
+.edit > button  {
+  background-color: #b39f19;
+  border-radius: 5px;
+  padding:5px;
+  color:white;
+  text-transform: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove:hover, .edit > button:hover {
+  background-color: white;
+  color: #b39f19;
+}

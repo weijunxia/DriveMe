@@ -20,13 +20,18 @@ function Car(props) {
 
   return (
     <div className="carprofile">
-      <div className="carcard">
-        <Cards
-          car_pic={carProfile.car_pic}
-          make={carProfile.make}
-          model={carProfile.model}
-          year={carProfile.year}
-        />
+      <div className="contain">
+        <div className="heading">
+          <h1>Vehicle Details</h1>
+        </div>
+        <div className="carcard">
+          <Cards
+            car_pic={carProfile.car_pic}
+            make={carProfile.make}
+            model={carProfile.model}
+            year={carProfile.year}
+          />
+        </div>
       </div>
       {carProfile.Reviews ? (
         <div className="search_results">
