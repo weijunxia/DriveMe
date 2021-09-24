@@ -1,7 +1,11 @@
 import Axios from 'axios'
 
-export const BASE_URL = 'http://localhost:3001/api'
-const Client = Axios.create({ baseURL: BASE_URL })
+const Client = Axios.create({
+  baseURL:
+    process.env.NODE_ENV === 'production'
+      ? `${window.location.origin}`
+      : 'http://localhost:3001'
+})
 
 Client.interceptors.request.use(
   (config) => {

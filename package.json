@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "npm install && npx sequelize-cli db:migrate && cd client && rm -rf build && npm install && npm run build"
   },
   "repository": {
     "type": "git",
