@@ -1,10 +1,28 @@
 const { Car, Bookings, Review } = require('../models')
 // const AWService = require('../client/src/components/UploadImageToS3WithReactS3')
+const { Op } = require('sequelize')
 
 const GetCars = async (req, res) => {
   try {
     const cars = await Car.findAll()
     res.send(cars)
+  } catch (error) {
+    throw error
+  }
+}
+
+const QueryCars = async (req, res) => {
+  try {
+    const query = req.params.query
+    const searchResult = await Car.findAll({
+      where: {
+        [Op.or]: [
+          { model: { [Op.iLike]: '%' + query + '%' } },
+          { make: { [Op.iLike]: '%' + query + '%' } }
+        ]
+      }
+    })
+    res.send(searchResult)
   } catch (error) {
     throw error
   }
@@ -56,5 +74,6 @@ module.exports = {
   CreateCar,
   UpdateCar,
   DeleteCar,
-  GetCarProfile
+  GetCarProfile,
+  QueryCars
 }

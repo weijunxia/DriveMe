@@ -1,5 +1,5 @@
-const Router = require('express').Router()
 const controller = require('../controllers/UserController')
+const Router = require('express').Router()
 
 Router.get('/', controller.GetAllUserProfiles)
 Router.get('/:id', controller.GetUserProfile)

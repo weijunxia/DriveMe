@@ -1,12 +1,19 @@
-import React from 'react'
-import { Button } from '@material-ui/core'
+import SearchResults from '../components/SearchResults'
 import Filter from '@material-ui/icons/Filter'
-import './SearchPage.css'
-import SearchResults from './SearchResult'
+import { withRouter } from 'react-router-dom'
+import { Button } from '@material-ui/core'
+import React, { useState } from 'react'
+import './searchpage.css'
 
-function SearchPage() {
+function SearchPage(props) {
+  const [input, setInput] = useState(null)
+  const [searchCars, setSearchCars] = useState(null)
+
   return (
     <div className="searchPage">
+      <div className="search-bar">
+        <form className="search-form"></form>
+      </div>
       <div className="searchPageInfo">
         <Button variant="outline">Sort By</Button>
         <Button variant="outline">Price</Button>
@@ -14,10 +21,10 @@ function SearchPage() {
           <Filter />
           More filters
         </Button>
-        <SearchResults />
+        <SearchResults {...props} />
       </div>
     </div>
   )
 }
 
-export default SearchPage
+export default withRouter(SearchPage)

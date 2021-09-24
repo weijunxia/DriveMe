@@ -7,16 +7,20 @@ function PostReview(props) {
     name: '',
     rating: '',
     comment: '',
-    userId: props.userInfo.id,
-    carId: props.carProfile.id
+    user_id: props.userInfo.id,
+    car_id: props.carProfile.id
   })
 
   const handleRevChange = (event) => {
     setReviewForm({ ...reviewForm, [event.target.name]: event.target.value })
   }
 
-  const handleRevSubmit = async (e, reviewForm) => {
+  const handleRevSubmit = async (e) => {
     e.preventDefault()
+    console.log(props.carProfile.id)
+    let id = props.carProfile.id
+    setReviewForm({ ...reviewForm, car_id: id })
+    console.log(reviewForm)
     const res = await PostNewReview(reviewForm)
   }
 

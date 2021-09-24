@@ -14,12 +14,26 @@ module.exports = {
             'This was an amazing car and the host was extremely helpful. Will rent again'
         },
         {
+          car_id: 1,
+          user_id: 1,
+          rating: 5,
+          name: 'Wei',
+          comment: 'I only drive teslas and this one was awesome.'
+        },
+        {
           car_id: 2,
           user_id: 2,
           name: 'Arty',
           rating: 4,
           comment:
             'This was truly compact which was only downside.super nice and clean still'
+        },
+        {
+          car_id: 2,
+          user_id: 2,
+          name: 'Jae',
+          rating: 4,
+          comment: 'Small car but gets the job done and the host was super nice'
         },
         {
           car_id: 3,
@@ -41,6 +55,13 @@ module.exports = {
           name: 'Ashley',
           rating: 4,
           comment: 'This was a very smooth rental experience. Loved it'
+        },
+        {
+          car_id: 4,
+          user_id: 4,
+          name: 'Joey',
+          rating: 5,
+          comment: 'Love the model S. Would rent again for sure'
         }
       ],
       {}

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import { GetCarsById } from '../services/CarServices'
+import React, { useEffect, useState } from 'react'
+import StarIcon from '@material-ui/icons/Star'
+import { withRouter } from 'react-router-dom'
 import Cards from '../components/Cards'
 import './car.css'
-import { withRouter } from 'react-router-dom'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
-import StarIcon from '@material-ui/icons/Star'
 import PostReview from './PostReview'
 
 function Car({ userInfo, ...props }) {
@@ -16,7 +16,7 @@ function Car({ userInfo, ...props }) {
   }
   useEffect(() => {
     getCar()
-  }, [props])
+  }, [])
 
   return (
     <div className="carprofile">
