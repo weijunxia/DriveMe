@@ -8,6 +8,16 @@ export const GetCars = async () => {
     throw error
   }
 }
+
+export const SearchCars = async (query) => {
+  try {
+    const res = await Client.get(`/cars/search/${query}`)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const PostNewCar = async (data) => {
   try {
     const res = await Client.post('/cars', data)

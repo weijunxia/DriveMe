@@ -1,7 +1,7 @@
+import UploadImageToS3WithReactS3 from '../components/UploadImageToS3WithReactS3'
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import './postcar.css'
-import UploadImageToS3WithReactS3 from '../components/UploadImageToS3WithReactS3'
 
 function PostCar(props) {
   const [formData, setFormData] = useState({

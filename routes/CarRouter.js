@@ -1,9 +1,11 @@
-const router = require('express').Router()
 const controller = require('../controllers/CarController')
 const middleware = require('../middleware')
+const router = require('express').Router()
 
 router.get('/', controller.GetCars)
 router.get('/:id', controller.GetCarProfile)
+router.get('/search/:query', controller.QueryCars)
+
 router.post(
   '/',
   middleware.stripToken,

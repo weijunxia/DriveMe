@@ -1,11 +1,10 @@
+import { DateRangePicker } from 'react-date-range'
+import 'react-date-range/dist/theme/default.css'
+import { Button } from '@material-ui/core'
+import 'react-date-range/dist/styles.css'
+import { useHistory } from 'react-router'
 import React, { useState } from 'react'
 import './search.css'
-import 'react-date-range/dist/styles.css'
-import 'react-date-range/dist/theme/default.css'
-import PeopleIcon from '@material-ui/icons/'
-import { Button } from '@material-ui/core'
-import { DateRangePicker } from 'react-date-range'
-import { useHistory } from 'react-router'
 
 function Search() {
   const history = useHistory()
@@ -14,7 +13,8 @@ function Search() {
 
   const selectionRange = {
     startDate: startDate,
-    endDate: endDate
+    endDate: endDate,
+    key: 'selection'
   }
 
   function handleSelect(ranges) {

@@ -1,7 +1,7 @@
-import React from 'react'
+import Carousel from 'react-material-ui-carousel'
 import Banner from '../components/Banner'
 import Cards from '../components/Cards'
-import Carousel from 'react-material-ui-carousel'
+import React from 'react'
 import './home.css'
 
 function Home(props) {

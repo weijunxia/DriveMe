@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import './searchResults.css'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
+import React, { useState, useEffect } from 'react'
 import StarIcon from '@material-ui/icons/Star'
 import { NavLink } from 'react-router-dom'
+import './searchResults.css'
 
 function SearchResults(props) {
+  console.log(props.searchCars)
   return (
     <div className="search_results">
       <div className="search_results_card">
         {props.cars.map((car) => (
-          <NavLink to={`/cars/${car.id}`} style={{ textDecoration: 'none' }}>
+          <NavLink
+            to={`/cars/${car.id}`}
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
             <div className="search_result_cars" key={car.id}>
               <img
                 src={car.car_pic}
