@@ -13,6 +13,7 @@ import AboutUs from './pages/AboutUs'
 import LearnMore from './pages/LearnMore'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
+
 import {
   GetCars,
   PostNewCar,
@@ -23,6 +24,7 @@ import { GetProfile } from './services/UserServices'
 import { withRouter } from 'react-router-dom'
 import Car from './pages/Car'
 import EditCar from './pages/EditCar'
+import PostReview from './pages/PostReview'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -101,6 +103,7 @@ function App(props) {
               path="/cars/:id"
               component={(props) => <Car {...props} />}
             />
+
             <Route
               exact
               path="/profile/cars/:id"
