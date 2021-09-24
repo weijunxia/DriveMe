@@ -52,9 +52,15 @@ The project was deployed on Heroku and can be viewed [here]().
 
 ## 📸 Screenshots
 
+### Home Page
+
 ![screenshot](images/Home_page.png)
 
+### Register Page
+
 ![screenshot2](images/Register_page.png)
+
+### Signin Page
 
 ![screenshot3](images/Signin_page.png)
 
