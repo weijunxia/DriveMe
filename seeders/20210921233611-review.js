@@ -62,6 +62,21 @@ module.exports = {
           name: 'Joey',
           rating: 5,
           comment: 'Love the model S. Would rent again for sure'
+        },
+        {
+          car_id: 5,
+          user_id: 4,
+          name: 'Andrew',
+          rating: 5,
+          comment:
+            'Wow i never thought i would get to try this car. I am beyond satisfied'
+        },
+        {
+          car_id: 5,
+          user_id: 4,
+          name: 'Sam',
+          rating: 5,
+          comment: 'THIS CAR IS A BEAST !!!! I LOVE IT'
         }
       ],
       {}

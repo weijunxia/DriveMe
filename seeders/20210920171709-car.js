@@ -48,6 +48,17 @@ module.exports = {
           car_pic:
             'https://s1.cdn.autoevolution.com/images/news/elon-musk-says-400-mile-range-possible-for-tesla-model-s-redesign-140736-7.jpg',
           price: 300
+        },
+        {
+          user_id: 1,
+          make: 'Tesla',
+          model: 'CyberTruck',
+          year: 2021,
+          description:
+            'The Cybertruck is a one of a kind vehicle. Not many can say they have drove this beast!',
+          car_pic:
+            'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-tesla-cyber-truck-mmp-1-1579127142.jpg?crop=0.788xw:1.00xh;0.107xw,0&resize=640:*',
+          price: 1000
         }
       ],
       {}
