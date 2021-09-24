@@ -1,14 +1,17 @@
-/* .homeSection {
+.home_section {
   display: flex;
- justify-content: center;
-} */
-/* 
-.header {
-  display:flex;
-  text-align: center;
-  flex-direction: column;
-} */
+  justify-content: space-around;
+  align-items: space-around;
+}
 
+.carousel_wrapper {
+}
+.title_carousel {
+  padding: 10px;
+  margin-left: 50px;
+  margin-top: 30px;
+  color: #b39f19;
+}
 
 .homeSection > p {
   text-align: center;
