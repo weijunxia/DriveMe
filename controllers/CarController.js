@@ -1,5 +1,5 @@
 const { Car, Bookings, Review } = require('../models')
-const AWService = require('../client/src/components/UploadImageToS3WithReactS3')
+// const AWService = require('../client/src/components/UploadImageToS3WithReactS3')
 
 const GetCars = async (req, res) => {
   try {
