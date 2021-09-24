@@ -24,7 +24,7 @@ function EditCar(props) {
       car_pic: updatedCar.car_pic,
       price: parseInt(updatedCar.price)
     }
-    console.log('newUpdatedCar', newUpdatedCar)
+
     const res = await UpdateCar(props.match.params.id, newUpdatedCar)
     if (res.status === 200) {
       props.history.push('/profile')

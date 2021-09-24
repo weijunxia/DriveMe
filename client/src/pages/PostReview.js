@@ -1,74 +1,68 @@
-// import Form from 'react-bootstrap/Form'
-// import React, { useState } from 'react'
-// import { withRouter } from 'react-router-dom'
-// import { PostNewReview } from './services/ReviewServices'
+import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom'
+import { PostNewReview } from '../services/ReviewServices'
 
-// function PostReview(props) {
-//   const [reviewForm, setReviewForm] = useState({
-//     name: '',
-//     rating: '',
-//     comment: '',
-//     userId: props.userInfo.id,
-//     carId: props.carProfile.id
-//   })
+function PostReview(props) {
+  const [reviewForm, setReviewForm] = useState({
+    name: '',
+    rating: '',
+    comment: '',
+    userId: props.userInfo.id,
+    carId: props.carProfile.id
+  })
 
-//   const handleRevChange = (event) => {
-//     setReviewForm({ ...reviewForm, [event.target.name]: event.target.value })
-//   }
+  const handleRevChange = (event) => {
+    setReviewForm({ ...reviewForm, [event.target.name]: event.target.value })
+  }
 
-//   const handleRevSubmit = async (e, reviewForm) => {
-//     e.preventDefault()
-//     const res = await PostNewReview(reviewForm)
-//   }
+  const handleRevSubmit = async (e, reviewForm) => {
+    e.preventDefault()
+    const res = await PostNewReview(reviewForm)
+  }
 
-//   return (
-//     <div className="post_car">
-//       <div>
-//         <div className="form_wrapper2">
-//           <h2 className="title_post_car"> Post Your Review</h2>
-//           <Form onSubmit={handleRevSubmit}>
-//             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-//               <Form.Label>Name</Form.Label>
-//               <Form.Control
-//                 type="string"
-//                 placeholder="Your Name"
-//                 onChange={handleRevChange}
-//                 value={reviewForm.name}
-//               />
-//             </Form.Group>
-//             <Form.Group
-//               className="mb-3"
-//               controlId="exampleForm.ControlTextarea1"
-//             >
-//               <Form.Label>Rating </Form.Label>
-//               <Form.Control
-//                 as="textarea"
-//                 placeholder="Rate your rental experience from 1-5"
-//                 type="number"
-//                 rows={1}
-//                 onChange={handleRevChange}
-//                 value={reviewForm.rating}
-//               />
-//             </Form.Group>
-//             <Form.Group
-//               className="mb-3"
-//               controlId="exampleForm.ControlTextarea1"
-//             >
-//               <Form.Label>Comment </Form.Label>
-//               <Form.Control
-//                 as="textarea"
-//                 placeholder="Tell us more about your rental experience"
-//                 rows={1}
-//                 onChange={handleRevChange}
-//                 value={reviewForm.comment}
-//               />
-//             </Form.Group>
-//             <button type="submit">SUMBIT</button>
-//           </Form>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+  return (
+    <div className="post_review">
+      <div className="form_wrapper">
+        <h2 className="title_signin">Post Your Review</h2>
+        <form className="col">
+          <div className="input-wrapper">
+            <label htmlFor="name">Name</label>
+            <input
+              onChange={handleRevChange}
+              name="name"
+              type="name"
+              placeholder="Enter Your Name"
+              value={reviewForm.name}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="rating">Rating</label>
+            <input
+              onChange={handleRevChange}
+              type="number"
+              name="rating"
+              value={reviewForm.rating}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="comment">Comment</label>
+            <input
+              onChange={handleRevChange}
+              type="name"
+              name="comment"
+              value={reviewForm.comment}
+              required
+            />
+          </div>
+          <button className="post_button" onClick={handleRevSubmit}>
+            Post Review
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}
 
-// export default withRouter(PostReview)
+export default withRouter(PostReview)
