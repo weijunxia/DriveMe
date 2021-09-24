@@ -20,6 +20,7 @@ export const GetAllReviewsByUser = async (userId) => {
 
 export const PostNewReview = async (data) => {
   try {
+    console.log(data)
     const res = await Client.post('/reviews', data)
     return res.data
   } catch (error) {

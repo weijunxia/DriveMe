@@ -5,8 +5,9 @@ import StarIcon from '@material-ui/icons/Star'
 import { withRouter } from 'react-router-dom'
 import Cards from '../components/Cards'
 import './car.css'
+import PostReview from './PostReview'
 
-function Car(props) {
+function Car({ userInfo, ...props }) {
   const [carProfile, setCarProfile] = useState({})
 
   const getCar = async () => {
@@ -15,8 +16,7 @@ function Car(props) {
   }
   useEffect(() => {
     getCar()
-  }, [props])
-  console.log(carProfile.Reviews)
+  }, [])
 
   return (
     <div className="carprofile">
@@ -24,13 +24,18 @@ function Car(props) {
         <div className="heading">
           <h1>Vehicle Details</h1>
         </div>
-        <div className="carcard">
-          <Cards
-            car_pic={carProfile.car_pic}
-            make={carProfile.make}
-            model={carProfile.model}
-            year={carProfile.year}
-          />
+        <div className="try">
+          <div className="carcard">
+            <Cards
+              car_pic={carProfile.car_pic}
+              make={carProfile.make}
+              model={carProfile.model}
+              year={carProfile.year}
+            />
+          </div>
+        </div>
+        <div className="form">
+          <PostReview {...props} carProfile={carProfile} userInfo={userInfo} />
         </div>
       </div>
       {carProfile.Reviews ? (

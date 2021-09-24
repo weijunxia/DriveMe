@@ -95,7 +95,7 @@ function App(props) {
             <Route
               exact
               path="/cars/:id"
-              component={(props) => <Car {...props} />}
+              component={(props) => <Car {...props} userInfo={userInfo} />}
             />
 
             <Route
