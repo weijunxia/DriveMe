@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import './learnmore.css'
-import { NavLink } from 'react-router-dom'
 import SearchResults from '../components/SearchResults'
-import Search from './Search'
 import { Button } from '@material-ui/core'
+import { NavLink } from 'react-router-dom'
 import { useHistory } from 'react-router'
+import React, { useState } from 'react'
+import Search from './Search'
+import './learnmore.css'
+
 function LearnMore() {
   const history = useHistory()
   const [showSearch, setShowSearch] = useState(false)

@@ -1,30 +1,23 @@
-import './App.css'
-import React, { useState, useEffect } from 'react'
-import Footer from './components/Footer'
-import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import SearchResults from './components/SearchResults'
-import Home from './pages/Home'
-import Register from './pages/Register'
-import SignIn from './pages/SignIn'
-import PostCar from './pages/PostCar'
-import Profile from './pages/Profile'
-import AboutUs from './pages/AboutUs'
-import LearnMore from './pages/LearnMore'
-import { CheckSession } from './services/Auth'
+import { GetCars, PostNewCar } from './services/CarServices'
 import ProtectedRoute from './components/ProtectedRoute'
-
-import {
-  GetCars,
-  PostNewCar,
-  GetCarsById,
-  UpdateCar
-} from './services/CarServices'
 import { GetProfile } from './services/UserServices'
+import React, { useState, useEffect } from 'react'
+import SearchPage from './components/SearchPage'
+import { CheckSession } from './services/Auth'
 import { withRouter } from 'react-router-dom'
-import Car from './pages/Car'
+import LearnMore from './pages/LearnMore'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Register from './pages/Register'
+import PostCar from './pages/PostCar'
 import EditCar from './pages/EditCar'
-import PostReview from './pages/PostReview'
+import AboutUs from './pages/AboutUs'
+import Profile from './pages/Profile'
+import SignIn from './pages/SignIn'
+import Home from './pages/Home'
+import Car from './pages/Car'
+import './App.css'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -86,6 +79,7 @@ function App(props) {
             authenticated={authenticated}
             user={user}
             handleLogOut={handleLogOut}
+            {...props}
           />
           <Switch>
             <Route
@@ -96,7 +90,7 @@ function App(props) {
             <Route
               exact
               path="/search"
-              component={(props) => <SearchResults {...props} cars={cars} />}
+              component={(props) => <SearchPage {...props} cars={cars} />}
             />
             <Route
               exact

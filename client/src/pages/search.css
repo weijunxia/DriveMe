@@ -1,16 +1,18 @@
 .search {
   position: absolute;
   top: 35px;
-  left: 25%;
-  width: 100vw;
+  left: 10%;
+  right: 10%;
+  width: 1vw !important;
 }
+
 .search > button {
   position: absolute;
   left: 0;
-  top: 480px;
+  top: 349px;
   text-transform: inherit !important;
   background-color: #b39f19;
-  width: 580px;
+  width: 84.5vw;
 }
 .search > button:hover {
   background-color: white;

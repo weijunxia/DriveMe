@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
+import React, { useState } from 'react'
 import './register-signin.css'
+
 const iState = {
   name: '',
   email: '',

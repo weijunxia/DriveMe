@@ -1,6 +1,3 @@
-import React from 'react'
-import './footer.css'
-import { Link } from 'react-router-dom'
 import {
   FaFacebook,
   FaInstagram,
@@ -8,18 +5,21 @@ import {
   FaYoutube,
   FaLinkedin
 } from 'react-icons/fa'
+import './footer.css'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer_left">
-        <Link to="/about" style={{ textDecoration: 'none' }}>
+        <Link to="/about" style={{ textDecoration: 'none', color: 'black' }}>
           <p className="footerP">About Us</p>
         </Link>
-        <Link to="/learn" style={{ textDecoration: 'none' }}>
+        <Link to="/learn" style={{ textDecoration: 'none', color: 'black' }}>
           <p className="footerP">Learn More</p>
         </Link>
-        <Link to="/privacy" style={{ textDecoration: 'none' }}>
+        <Link to="/privacy" style={{ textDecoration: 'none', color: 'black' }}>
           <p className="footerP">Privacy</p>
         </Link>
       </div>

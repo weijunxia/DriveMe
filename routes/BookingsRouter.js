@@ -1,6 +1,6 @@
-const router = require('express').Router()
 const controller = require('../controllers/BookingController')
 const middleware = require('../middleware')
+const router = require('express').Router()
 
 router.post(
   '/',
