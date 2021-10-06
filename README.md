@@ -6,13 +6,13 @@
 
 ## Date: 09/20/2021
 
-### Wei Jun Xia [GitHub](https://github.com/weijunxia) | [LinkedIn](https://www.linkedin.com/in/w3i/)
+#### Wei Jun Xia [GitHub](https://github.com/weijunxia) | [LinkedIn](https://www.linkedin.com/in/w3i/)
 
-### Derek Valenciano [Github](https://github.com/dvalenciano) | [LinkedIn](https://www.linkedin.com/in/derekvalenciano)
+#### Derek Valenciano [Github](https://github.com/dvalenciano) | [LinkedIn](https://www.linkedin.com/in/derekvalenciano)
 
-### Mustapfa Hydara [GitHub](https://github.com/mhydara0624) | [LinkedIn](https://www.linkedin.com/in/mustapfahydara)
+#### Mustapfa Hydara [GitHub](https://github.com/mhydara0624) | [LinkedIn](https://www.linkedin.com/in/mustapfahydara)
 
-### Svetlana Shirapova [GitHub](https://github.com/SvetLana203) | [LinkedIn](https://www.linkedin.com/in/svetlana-shirapova-aa9068219?)
+#### Svetlana Shirapova [GitHub](https://github.com/SvetLana203) | [LinkedIn](https://www.linkedin.com/in/svetlana-shirapova-aa9068219?)
 
 </div>
 
