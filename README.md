@@ -6,13 +6,13 @@
 
 ## Date: 09/20/2021
 
-### Wei Jun Xia [GitHub]() | [LinkedIn]()
+### Wei Jun Xia [GitHub](https://github.com/weijunxia) | [LinkedIn](https://www.linkedin.com/in/w3i/)
 
-### Derek Valenciano [Github]() | [LinkedIn]()
+### Derek Valenciano [Github](https://github.com/dvalenciano) | [LinkedIn](https://www.linkedin.com/in/derekvalenciano)
 
-### Mustapfa Hydara [GitHub]() | [LinkedIn]()
+### Mustapfa Hydara [GitHub](https://github.com/mhydara0624) | [LinkedIn](https://www.linkedin.com/in/mustapfahydara)
 
-### Svetlana Shirapova [GitHub]() | [LinkedIn]()
+### Svetlana Shirapova [GitHub](https://github.com/SvetLana203) | [LinkedIn](https://www.linkedin.com/in/svetlana-shirapova-aa9068219?)
 
 </div>
 
@@ -22,6 +22,8 @@
 
 DriveMe - a full-stack application built with React.js as front-end, Node.js and Express.js as back-end.
 DriveMe is a futuristic no hassle car rental service made to fit modern travel needs.
+
+[Live Demo](https://rocky-journey-81641.herokuapp.com)
 
  <br/>
  <div align="center">
