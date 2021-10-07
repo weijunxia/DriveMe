@@ -50,7 +50,7 @@ Sign up as a new user.
 
 A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/i35voRC8/group-project).
 
-The project was deployed on Heroku and can be viewed [here]().
+
 
 ## 📸 Screenshots
 
